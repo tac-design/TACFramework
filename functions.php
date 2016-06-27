@@ -2,6 +2,9 @@
 
 // External files
 require_once( 'external/starkers-utilities.php' );
+require_once( 'lib/project.core.posts.php' );
+require_once( 'external/project.core.setup.php' );
+require_once( 'external/project.core.queries.php' );
 
 // Actions and filters
 add_action( 'init', 'script_enqueuer' ); 
