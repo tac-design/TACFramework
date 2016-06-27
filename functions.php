@@ -27,9 +27,6 @@ function script_enqueuer() {
 		// Modernizr
 		wp_register_script( 'modernizr', get_stylesheet_directory_uri().'/js/modernizr.js', array( 'jquery' ) );
 		wp_enqueue_script( 'modernizr' );
-		// Retina
-		wp_register_script( 'retina', get_stylesheet_directory_uri().'/js/retina.js', array( 'jquery' ) );
-		wp_enqueue_script( 'retina' );
 		// Site
 		wp_register_script( 'site', get_stylesheet_directory_uri().'/js/site.js', array( 'jquery' ) );
 		wp_enqueue_script( 'site' );
