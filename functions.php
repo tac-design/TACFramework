@@ -11,7 +11,7 @@ add_filter( 'body_class', 'add_slug_to_body_class' );
 function css_enqueuer() {
         wp_register_style( 'tac_main', get_stylesheet_directory_uri().'/style.css' );
         wp_enqueue_style( 'tac_main' );
-        wp_register_style( 'tac_ontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+        wp_register_style( 'tac_fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
     	wp_enqueue_style( 'tac_fontawesome' );
     }
 add_action( 'wp_enqueue_scripts', 'tac_css_enqueuer' );
