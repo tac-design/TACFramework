@@ -18,9 +18,12 @@ add_action( 'wp_enqueue_scripts', 'css_enqueuer' );
 // Enqueue JS
 function script_enqueuer() {
 	if( ! is_admin() ) {
-		// Site
+		// Carousel
 		wp_register_script( 'carousel', get_stylesheet_directory_uri().'/js/owl.carousel.js', array( 'jquery' ) );
 		wp_enqueue_script( 'carousel' );
+		// matchHeight
+		wp_register_script( 'matchHeight', get_stylesheet_directory_uri().'/js/jquery.matchHeight.js', array( 'jquery' ) );
+		wp_enqueue_script( 'matchHeight' );
 		// Modernizr
 		wp_register_script( 'modernizr', get_stylesheet_directory_uri().'/js/modernizr.js', array( 'jquery' ) );
 		wp_enqueue_script( 'modernizr' );
