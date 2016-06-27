@@ -58,7 +58,8 @@ add_action( 'widgets_init', 'tac_widgets_init' );
 
 // Menus
 register_nav_menus( array(
-	'primary' => 'Primary Navigation',
+	'main' => 'Main Navigation',
+	'mobile' => 'Mobile Navigation',
 ) );
 
 ?>
