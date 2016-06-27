@@ -14,9 +14,16 @@
 	<body <?php body_class(); ?>>
 
 		<header class="site-head">
+
 			<a href="/"><?php bloginfo( 'name' ); ?></a>
+
+			<nav class="main-nav">
+
+				<?php 
+				wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+
+			</nav>
+
 		</header>
 
-		<nav class="main-nav">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav>
+		<main class="content">
