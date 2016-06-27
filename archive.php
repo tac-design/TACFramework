@@ -18,7 +18,7 @@
 	
 <?php while ( have_posts() ) : the_post(); ?>
 <h2><a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-<time datetime="<?php the_time( 'Y-m-D' ); ?>"><?php the_date(); ?> <?php the_time(); ?></time>
+<time datetime="<?php echo gmdate("Y-m-d\TH:i:s", $timestamp); ?>"><?php echo gmdate("d/m/Y", $timestamp); ?></time>
 <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
 <?php the_content(); ?>
 <?php endwhile; ?>
