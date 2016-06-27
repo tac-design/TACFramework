@@ -13,5 +13,6 @@ sitemap.xml
 sitemap.xml.gz
 icon.png
 *.sublime-project
+*.sublime-workspace
 
 !.gitignore
