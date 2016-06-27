@@ -9,10 +9,10 @@ add_filter( 'body_class', 'add_slug_to_body_class' );
 
 // Enqueue CSS
 function css_enqueuer() {
-        wp_register_style( 'main', get_stylesheet_directory_uri().'/style.css' );
-        wp_enqueue_style( 'main' );
-        wp_register_style( 'fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
-    	wp_enqueue_style( 'fontawesome' );
+        wp_register_style( 'tac_main', get_stylesheet_directory_uri().'/style.css' );
+        wp_enqueue_style( 'tac_main' );
+        wp_register_style( 'tac_ontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+    	wp_enqueue_style( 'tac_fontawesome' );
     }
 add_action( 'wp_enqueue_scripts', 'css_enqueuer' );
 
@@ -21,17 +21,17 @@ add_action( 'wp_enqueue_scripts', 'css_enqueuer' );
 function script_enqueuer() {
 	if( ! is_admin() ) {
 		// Carousel
-		wp_register_script( 'carousel', get_stylesheet_directory_uri().'/js/owl.carousel.js', array( 'jquery' ) );
-		wp_enqueue_script( 'carousel' );
+		wp_register_script( 'tac_carousel', get_stylesheet_directory_uri().'/js/owl.carousel.js', array( 'jquery' ) );
+		wp_enqueue_script( 'tac_carousel' );
 		// matchHeight
-		wp_register_script( 'matchHeight', get_stylesheet_directory_uri().'/js/jquery.matchHeight.js', array( 'jquery' ) );
-		wp_enqueue_script( 'matchHeight' );
+		wp_register_script( 'tac_matchHeight', get_stylesheet_directory_uri().'/js/jquery.matchHeight.js', array( 'jquery' ) );
+		wp_enqueue_script( 'tac_matchHeight' );
 		// Modernizr
-		wp_register_script( 'modernizr', get_stylesheet_directory_uri().'/js/modernizr.js', array( 'jquery' ) );
-		wp_enqueue_script( 'modernizr' );
+		wp_register_script( 'tac_modernizr', get_stylesheet_directory_uri().'/js/modernizr.js', array( 'jquery' ) );
+		wp_enqueue_script( 'tac_modernizr' );
 		// Site
-		wp_register_script( 'site', get_stylesheet_directory_uri().'/js/site.js', array( 'jquery' ) );
-		wp_enqueue_script( 'site' );
+		wp_register_script( 'tac_site', get_stylesheet_directory_uri().'/js/site.js', array( 'jquery' ) );
+		wp_enqueue_script( 'tac_site' );
 	};
 }	
 
