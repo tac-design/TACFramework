@@ -1,13 +1,15 @@
 <?php
 
 // External files
-require_once( 'external/starkers-utilities.php' );
-require_once( 'lib/project.core.posts.php' );
-require_once( 'external/project.core.setup.php' );
-require_once( 'external/project.core.queries.php' );
+require_once( 'lib/tac.framework.posts.php' );
+require_once( 'lib/tac.framework.setup.php' );
+require_once( 'lib/tac.framework.queries.php' );
+require_once( 'lib/tac.framework.utilities.php' );
+
 
 // Actions and filters
 add_action( 'init', 'script_enqueuer' ); 
+
 
 // Enqueue CSS
 function css_enqueuer() {
@@ -38,6 +40,7 @@ function tac_script_enqueuer() {
 }
 add_action( 'wp_enqueue_scripts', 'tac_script_enqueuer' );
 
+
 // Widgets
 function tac_widgets_init() {
 	register_sidebar( array(
@@ -51,6 +54,7 @@ function tac_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'tac_widgets_init' );
+
 
 // Menus
 register_nav_menus( array(
