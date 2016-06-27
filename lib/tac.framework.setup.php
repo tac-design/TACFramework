@@ -3,6 +3,14 @@
 // Add support for post thumbnails
 add_theme_support( 'post-thumbnails' );
 
+
+// Add HTML5 theme support
+function tac_after_setup_theme() {
+    add_theme_support( 'html5', array( 'search-form' ) );
+}
+add_action( 'after_setup_theme', 'tac_after_setup_theme' );
+
+
 // Remove unused meta boxes
 function remove_dashboard_widgets() {
 	global $wp_meta_boxes;
