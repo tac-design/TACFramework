@@ -8,7 +8,6 @@ require_once( 'external/project.core.queries.php' );
 
 // Actions and filters
 add_action( 'init', 'script_enqueuer' ); 
-add_filter( 'body_class', 'add_slug_to_body_class' );
 
 // Enqueue CSS
 function css_enqueuer() {
