@@ -1,51 +1,30 @@
 <?php
 
-function register_post_type_name() {
+function tac_create_post_type() {
 
-	$labels = array(
-		'name'                => 'Products',
-		'singular_name'       => 'Product',
-		'menu_name'           => 'Products',
-		'parent_item_colon'   => 'Parent Product:',
-		'all_items'           => 'All Products',
-		'view_item'           => 'View Product',
-		'add_new_item'        => 'Add New Product',
-		'add_new'             => 'New Product',
-		'edit_item'           => 'Edit Product',
-		'update_item'         => 'Update Product',
-		'search_items'        => 'Search products',
-		'not_found'           => 'No products found',
-		'not_found_in_trash'  => 'No products found in Trash',
+	register_post_type( 'services',
+		array(
+			'labels' => array(
+				'name' => __( 'Name' ),
+				'singular_name' => __( 'Name' )
+			),
+			'public' => true,
+			'has_archive' => false,
+			'rewrite' => array('slug' => 'name'),
+			'supports' => array( 'title', 'editor', 'thumbnail' ),
+			'menu_icon' => 'dashicons-desktop',
+		)
 	);
-	$args = array(
-		'label'               => 'product',
-		'description'         => 'Product information pages',
-		'labels'              => $labels,
-		'supports'            => array( ),
-		'taxonomies'          => array( 'category', 'post_tag' ),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => true,
-		'show_in_admin_bar'   => true,
-		'menu_position'       => 5,
-		'menu_icon'           => 'dashicons-format-aside',
-		'can_export'          => true,
-		'has_archive'         => true,
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'capability_type'     => 'page',
-	);
-	register_post_type( 'product', $args );
 }
-add_action( 'init', 'register_post_type_name', 0 );
+
+add_action( 'init', 'tac_create_post_type' );
+
 
 require_once( 'Custom-Meta-Boxes/custom-meta-boxes.php' );
 
-add_filter( 'cmb_meta_boxes', 'metaboxes' );
+add_filter( 'cmb_meta_boxes', 'tac_metaboxes' );
 
-function metaboxes( array $meta_boxes ) {
+function tac_metaboxes( array $meta_boxes ) {
 
 	$meta_boxes[] = array(
 		'title' => 'Questions',
