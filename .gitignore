@@ -11,7 +11,7 @@ ehthumbs.db
 .htaccess
 sitemap.xml
 sitemap.xml.gz
-
 icon.png
+*.sublime-project
 
 !.gitignore
