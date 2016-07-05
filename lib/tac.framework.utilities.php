@@ -1,3 +1,4 @@
+<?php
 /**
  * Print a pre formatted array to the browser - very useful for debugging
  *
