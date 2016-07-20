@@ -15,7 +15,7 @@
 
 		<header class="site-head">
 
-			<a href="/"><?php bloginfo( 'name' ); ?></a>
+			<a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg" alt="<?php bloginfo( 'name' );?>"></a>
 
 			<nav class="main-nav">
 
