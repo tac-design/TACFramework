@@ -20,7 +20,7 @@
 			<nav class="main-nav">
 
 				<?php 
-				wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
 
 			</nav>
 
