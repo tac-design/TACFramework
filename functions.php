@@ -12,7 +12,7 @@ add_action( 'init', 'script_enqueuer' );
 
 
 // Enqueue CSS
-function css_enqueuer() {
+function tac_css_enqueuer() {
         wp_register_style( 'tac_main', get_stylesheet_directory_uri().'/style.css' );
         wp_enqueue_style( 'tac_main' );
         wp_register_style( 'tac_fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
