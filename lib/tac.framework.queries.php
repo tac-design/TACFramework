@@ -1,6 +1,6 @@
 <?php
 //example function to customise query
-function project_customise_query( $query ) {
+function tac_customise_query( $query ) {
     if ( is_admin() || ! $query->is_main_query() )
         return;
 
@@ -9,6 +9,6 @@ function project_customise_query( $query ) {
         return;
     }
 }
-add_action( 'pre_get_posts', 'project_customise_query', 1 );
+add_action( 'pre_get_posts', 'tac_customise_query', 1 );
 
 ?>
