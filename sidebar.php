@@ -1,1 +1,1 @@
-<?php dynamic_sidebar( 'primary-widget-area' ); ?>
+<?php dynamic_sidebar( 'widget-area' );
