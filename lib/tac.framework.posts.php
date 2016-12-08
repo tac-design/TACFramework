@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Example function to create a custom post type
+ * Creates a post type 'services'
+ * All dashicons listed at https://developer.wordpress.org/resource/dashicons
+ **/
 function tac_create_post_type() {
 
 	register_post_type( 'services',
@@ -18,5 +23,3 @@ function tac_create_post_type() {
 }
 
 add_action( 'init', 'tac_create_post_type' );
-
-?>
