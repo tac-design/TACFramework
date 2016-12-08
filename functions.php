@@ -1,17 +1,18 @@
 <?php
 
-// External files
+/**
+ * Include files from the lib directory
+ **/
 require_once( 'lib/tac.framework.posts.php' );
 require_once( 'lib/tac.framework.setup.php' );
 require_once( 'lib/tac.framework.queries.php' );
 require_once( 'lib/tac.framework.utilities.php' );
 
 
-// Actions and filters
-add_action( 'init', 'script_enqueuer' ); 
-
-
-// Enqueue CSS
+/**
+ * Enqueue CSS
+ * Main CSS file and fontawesome
+ **/
 function tac_css_enqueuer() {
         wp_register_style( 'tac_main', get_stylesheet_directory_uri().'/style.css' );
         wp_enqueue_style( 'tac_main' );
@@ -21,7 +22,10 @@ function tac_css_enqueuer() {
 add_action( 'wp_enqueue_scripts', 'tac_css_enqueuer' );
 
 
-// Enqueue JS
+/**
+ * Enqueue JS
+ * Carousel, matchHeight, Modernizr and site
+ **/
 function tac_script_enqueuer() {
 	if( ! is_admin() ) {
 		// Carousel
@@ -41,7 +45,9 @@ function tac_script_enqueuer() {
 add_action( 'wp_enqueue_scripts', 'tac_script_enqueuer' );
 
 
-// Widgets
+/**
+ * Create a widget area
+ **/
 function tac_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Widget Area' ),
@@ -56,10 +62,11 @@ function tac_widgets_init() {
 add_action( 'widgets_init', 'tac_widgets_init' );
 
 
-// Menus
+/**
+ * Register menus
+ * Main and Mobile
+ **/
 register_nav_menus( array(
 	'main' => 'Main Navigation',
 	'mobile' => 'Mobile Navigation',
 ) );
-
-?>
