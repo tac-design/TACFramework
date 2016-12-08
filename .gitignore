@@ -1,5 +1,7 @@
 .DS_Store
 .DS_Store?
+**/.DS_Store
+*.DS_Store
 ._*
 .Spotlight-V100
 .Trashes
@@ -11,8 +13,19 @@ ehthumbs.db
 .htaccess
 sitemap.xml
 sitemap.xml.gz
-icon.png
-*.sublime-project
-*.sublime-workspace
 
+/*
 !.gitignore
+!wp-content/
+# !media/
+!favicon.ico
+!favicon.png
+!apple-touch-icon.png
+!robots.txt
+!humans.txt
+
+wp-content/*
+!wp-content/themes/
+
+wp-content/themes/*
+!wp-content/themes/themename/
