@@ -1,5 +1,9 @@
 <?php
-//example function to customise query
+/**
+ * Example function to customise query
+ * First if statement does nothing
+ * Second if statement sets posts per page to 9 if the page is a post archive
+ **/
 function tac_customise_query( $query ) {
     if ( is_admin() || ! $query->is_main_query() )
         return;
@@ -10,5 +14,3 @@ function tac_customise_query( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'tac_customise_query', 1 );
-
-?>
