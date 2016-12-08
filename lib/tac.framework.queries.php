@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Example function to customise query
  * First if statement does nothing
