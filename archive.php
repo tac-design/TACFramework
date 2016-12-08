@@ -1,18 +1,25 @@
 <?php get_header(); ?>
 
-<?php if ( have_posts() ): ?>
-		
-	<?php if (is_category()) { ?>
+<?php if ( have_posts() ):
+
+	/**
+	* Loop to control the archive title
+	* Outputs cat, tag, author, month, year
+	**/
+
+	if (is_category()) { ?>
 		<h1><?php single_cat_title(); ?></h1>
-	<?php } elseif (is_tag()) { ?>
+	<?php
+	} elseif (is_tag()) { ?>
 		<h1>Tags: <?php single_tag_title(); ?></h1>
-	<?php } elseif (is_author()) { ?>
+	<?php
+	} elseif (is_author()) { ?>
 		<h1>Author: <?php get_the_author_meta('display_name'); ?></h1>
-	<?php } elseif (is_day()) { ?>
-		<h1>Date: <?php the_time('l, F j, Y'); ?></h1>
-	<?php } elseif (is_month()) { ?>
+	<?php
+	} elseif (is_month()) { ?>
 		<h1>Monthly Archives: <?php the_time('F Y'); ?></h1>
-	<?php } elseif (is_year()) { ?>
+	<?php
+	} elseif (is_year()) { ?>
 		<h1>Year: <?php the_time('Y'); ?></h1>
 	<?php } ?>
 
