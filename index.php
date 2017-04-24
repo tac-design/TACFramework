@@ -1,15 +1,25 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Index
+ *
+ * The template for the blog index.
+ *
+ * @package TAC Framework
+ * @since Tac Framework 1.0
+ */
 
-<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>
+get_header();
 
-	<?php get_template_part( 'parts/archive-post' ); ?>
-
-<?php endwhile; else: ?>
+if ( have_posts() ) : while ( have_posts() ) : the_post();
+		get_template_part( 'parts/archive-post' );
+endwhile;
+else : ?>
 
 	<p>No posts to display</p>
 
-<?php endif; ?>
+<?php
+endif;
 
-<?php get_sidebar(); ?>
+get_sidebar();
 
-<?php get_footer();
+get_footer();

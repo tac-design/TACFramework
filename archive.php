@@ -1,33 +1,41 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Archive
+ *
+ * The default archive template used in the theme.
+ * Page titles are displayed dependent on the type of archive being shown.
+ *
+ * @package TAC Framework
+ * @since TAC Framework 1.0
+ */
 
-<?php if ( have_posts() ):
+get_header(); ?>
 
-	/**
-	* Loop to control the archive title
-	* Outputs cat, tag, author, month, year
-	**/
+<?php if ( have_posts() ) :
 
-	if (is_category()) { ?>
+	/* Loop to control the archive title. Outputs cat, tag, author, month, year */
+
+	if ( is_category() ) { ?>
 		<h1><?php single_cat_title(); ?></h1>
 	<?php
-	} elseif (is_tag()) { ?>
+	} elseif ( is_tag() ) { ?>
 		<h1>Tags: <?php single_tag_title(); ?></h1>
 	<?php
-	} elseif (is_author()) { ?>
-		<h1>Author: <?php get_the_author_meta('display_name'); ?></h1>
+	} elseif ( is_author() ) { ?>
+		<h1>Author: <?php get_the_author_meta( 'display_name' ); ?></h1>
 	<?php
-	} elseif (is_month()) { ?>
-		<h1>Monthly Archives: <?php the_time('F Y'); ?></h1>
+	} elseif ( is_month() ) { ?>
+		<h1>Monthly Archives: <?php the_time( 'F Y' ); ?></h1>
 	<?php
-	} elseif (is_year()) { ?>
-		<h1>Year: <?php the_time('Y'); ?></h1>
+	} elseif ( is_year() ) { ?>
+		<h1>Year: <?php the_time( 'Y' ); ?></h1>
 	<?php } ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 		
 		<?php get_template_part( 'parts/archive-post' ); ?>
 
-	<?php endwhile; else: ?>
+	<?php endwhile; else : ?>
 
 		<p>No posts to display</p>
 

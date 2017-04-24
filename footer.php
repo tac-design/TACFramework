@@ -1,7 +1,19 @@
+<?php
+/**
+ * Footer
+ *
+ * The template for the site footer.
+ *
+ * @package TAC Framework
+ * @since Tac Framework 1.0
+ */
+
+?>
+
 		</main>
 
 		<footer class="site-foot">
-			&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>
+			&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>
 		</footer>
 
 		<?php wp_footer(); ?>

@@ -1,19 +1,33 @@
 <?php
+/**
+ * Comments
+ *
+ * The templated used to receive and display comments on posts.
+ *
+ * @package TAC Framework
+ * @since TAC Framework 1.0
+ */
 
 /**
  * Hide comments on password protected posts
  **/
 if ( post_password_required() ) : ?>
 	<p>This post is password protected. Enter the password to view any comments</p>
-<?php return; endif; ?>
+<?php
+return;
+endif; ?>
 
-<?php /**
+<?php
+/**
  * Output the comments
  **/
 if ( have_comments() ) : ?>
 	<h2><?php comments_number(); ?></h2>
 	<ol>
-		<?php wp_list_comments( array( 'callback' => 'starkers_comment' ) ); ?>
+		<?php
+		wp_list_comments( array(
+			'callback' => 'starkers_comment',
+		) ); ?>
 	</ol>
 
 <?php
@@ -28,4 +42,4 @@ elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type()
 /**
  * Output the comment form
  **/
- comment_form();
+comment_form();

@@ -1,4 +1,13 @@
 <?php
+/**
+ * Functions
+ *
+ * The theme functions file.
+ * This file links to four files in the lib directors that should be removed if necessary.
+ *
+ * @package TAC Framework
+ * @since Tac Framework 1.0
+ */
 
 /**
  * Include files from the lib directory
@@ -14,11 +23,11 @@ require_once( 'lib/tac.framework.utilities.php' );
  * Main CSS file and fontawesome
  **/
 function tac_css_enqueuer() {
-        wp_register_style( 'tac_main', get_stylesheet_directory_uri().'/style.css' );
-        wp_enqueue_style( 'tac_main' );
-        wp_register_style( 'tac_fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
-    	wp_enqueue_style( 'tac_fontawesome' );
-    }
+	wp_register_style( 'tac_main', get_stylesheet_directory_uri() . '/style.css' );
+	wp_enqueue_style( 'tac_main' );
+	wp_register_style( 'tac_fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
+	wp_enqueue_style( 'tac_fontawesome' );
+}
 add_action( 'wp_enqueue_scripts', 'tac_css_enqueuer' );
 
 
@@ -27,18 +36,18 @@ add_action( 'wp_enqueue_scripts', 'tac_css_enqueuer' );
  * Carousel, matchHeight, Modernizr and site
  **/
 function tac_script_enqueuer() {
-	if( ! is_admin() ) {
-		// Carousel
-		wp_register_script( 'tac_carousel', get_stylesheet_directory_uri().'/js/owl.carousel.js', array( 'jquery' ) );
+	if ( ! is_admin() ) {
+		// Owl Carousel.
+		wp_register_script( 'tac_carousel', get_stylesheet_directory_uri() . '/js/owl.carousel.js', array( 'jquery' ) );
 		wp_enqueue_script( 'tac_carousel' );
-		// matchHeight
-		wp_register_script( 'tac_match_height', get_stylesheet_directory_uri().'/js/jquery.matchHeight.js', array( 'jquery' ) );
+		// matchHeight.
+		wp_register_script( 'tac_match_height', get_stylesheet_directory_uri() . '/js/jquery.matchHeight.js', array( 'jquery' ) );
 		wp_enqueue_script( 'tac_match_height' );
-		// Modernizr
-		wp_register_script( 'tac_modernizr', get_stylesheet_directory_uri().'/js/modernizr.js', array( 'jquery' ) );
+		// Modernizr.
+		wp_register_script( 'tac_modernizr', get_stylesheet_directory_uri() . '/js/modernizr.js', array( 'jquery' ) );
 		wp_enqueue_script( 'tac_modernizr' );
-		// Site
-		wp_register_script( 'tac_site', get_stylesheet_directory_uri().'/js/site.js', array( 'jquery' ) );
+		// Site.
+		wp_register_script( 'tac_site', get_stylesheet_directory_uri() . '/js/site.js', array( 'jquery' ) );
 		wp_enqueue_script( 'tac_site' );
 	};
 }
@@ -65,7 +74,7 @@ add_action( 'widgets_init', 'tac_widgets_init' );
 /**
  * Register menus
  * Main and Mobile
- **/
+ */
 register_nav_menus( array(
 	'main' => 'Main Navigation',
 	'mobile' => 'Mobile Navigation',
