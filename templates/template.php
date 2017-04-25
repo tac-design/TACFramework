@@ -2,21 +2,32 @@
 /**
  * Template Name: Template
  *
- * An example page template.
+ * A basic file for a page template.
  *
  * @package TAC Framework
- * @since Tac Framework 1.0
+ * @since TAC Framework 1.0
  */
 
-get_header();
+?>
 
-if ( have_posts() ) {
-	while ( have_posts() ) {
-		the_post();
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
 
-		the_title();
-		the_content();
-	}
-}
+		<?php
+		while ( have_posts() ) : the_post();
 
+			// Get the relevant template part to display the content.
+			get_template_part( 'template-parts/content', 'page' );
+
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
+
+		endwhile; ?>
+
+	</main>
+</div>
+
+<?php
 get_footer();
