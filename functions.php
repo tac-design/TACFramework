@@ -33,21 +33,14 @@ add_action( 'wp_enqueue_scripts', 'tac_css_enqueuer' );
 
 /**
  * Enqueue JS
- * Carousel, matchHeight, Modernizr and site
  */
 function tac_script_enqueuer() {
 	if ( ! is_admin() ) {
-		// Owl Carousel.
-		wp_register_script( 'tac_carousel', get_stylesheet_directory_uri() . '/js/owl.carousel.js', array( 'jquery' ) );
-		wp_enqueue_script( 'tac_carousel' );
-		// matchHeight.
-		wp_register_script( 'tac_match_height', get_stylesheet_directory_uri() . '/js/jquery.matchHeight.js', array( 'jquery' ) );
-		wp_enqueue_script( 'tac_match_height' );
 		// Modernizr.
 		wp_register_script( 'tac_modernizr', get_stylesheet_directory_uri() . '/js/modernizr.js', array( 'jquery' ) );
 		wp_enqueue_script( 'tac_modernizr' );
 		// Site.
-		wp_register_script( 'tac_site', get_stylesheet_directory_uri() . '/js/site.js', array( 'jquery' ) );
+		wp_register_script( 'tac_site', get_stylesheet_directory_uri() . '/js/site.min.js', array( 'jquery' ), null, true );
 		wp_enqueue_script( 'tac_site' );
 	};
 }
