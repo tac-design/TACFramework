@@ -13,19 +13,5 @@ ehthumbs.db
 .htaccess
 sitemap.xml
 sitemap.xml.gz
-
-/*
-!.gitignore
-!wp-content/
-# !media/
-!favicon.ico
-!favicon.png
-!apple-touch-icon.png
-!robots.txt
-!humans.txt
-
-wp-content/*
-!wp-content/themes/
-
-wp-content/themes/*
-!wp-content/themes/themename/
+icon.png
+tac-framework*
