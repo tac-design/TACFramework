@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Archive Post
+ * Archive Post
  *
  * A part file that can be used to display individual post date inside a loop.
  *
