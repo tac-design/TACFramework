@@ -2,33 +2,34 @@
 /**
  * Header
  *
- * The template for the site header.
+ * The template for the site header. Displays everything up to the main content.
  *
  * @package TAC Framework
- * @since Tac Framework 1.0
+ * @since TAC Framework 1.0
  */
 
 ?>
 
 <!DOCTYPE HTML>
-<html class="no-js" lang="en">
+<html <?php language_attributes(); ?>>
 	
 	<head>
-		<title><?php wp_title( '|' ); ?></title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="<?php echo esc_html( get_stylesheet_directory_uri() ); ?>/img/favicon.png"/>
-		<link rel="apple-touch-icon" href="<?php echo esc_html( get_stylesheet_directory_uri() ); ?>/img/apple-touch-icon.png"/>
+		<meta charset="<?php bloginfo( 'charset' ); ?>">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<?php wp_head(); ?>
 	</head>
 	
 	<body <?php body_class(); ?>>
 
-		<header class="site-head">
+		<header id="masthead" class="site-head" role="banner">
 			<a href="/"><img src="<?php echo esc_html( get_stylesheet_directory_uri() ); ?>/img/logo.svg" alt="<?php bloginfo( 'name' );?>"></a>
+			
 			<nav class="main-nav">
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'main',
 				) ); ?>
 			</nav>
+
 		</header>
