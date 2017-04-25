@@ -32,5 +32,3 @@
 				) ); ?>
 			</nav>
 		</header>
-
-		<main class="content">
