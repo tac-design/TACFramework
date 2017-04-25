@@ -10,8 +10,10 @@
 
 ?>
 
-		<footer class="site-foot">
-			&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>
+		<footer id="site-foot" class="site-foot" role="contentinfo">
+			<div class="site-info">
+				<span>&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?></span>
+			</div>
 		</footer>
 
 		<?php wp_footer(); ?>
