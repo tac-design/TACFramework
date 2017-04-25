@@ -1,8 +1,8 @@
 <?php
 /**
- * Footer
+ * Page
  *
- * The template for the site footer.
+ * The template for default pages.
  *
  * @package TAC Framework
  * @since TAC Framework 1.0

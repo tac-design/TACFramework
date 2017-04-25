@@ -1,27 +1,34 @@
 <?php
 /**
- * Single
+ * Page
  *
- * The default template for single posts.
+ * The template for single posts.
  *
  * @package TAC Framework
- * @since Tac Framework 1.0
+ * @since TAC Framework 1.0
  */
 
-get_header(); ?>
+?>
 
-<?php if ( have_posts() ) {
-	while ( have_posts() ) {
-		the_post(); ?>
-		<h2><?php the_title(); ?></h2>
-		<time datetime="<?php echo the_time( 'Y-m-d' ); ?>">Date: <?php the_time( 'Y-m-d' ); ?></time>
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+
 		<?php
-		comments_popup_link( 'Leave a Comment', '1 Comment', '% Comments' );
-		the_content();
-		comments_template( '', true );
-	}
-}
+		while ( have_posts() ) : the_post();
 
+			// Get the relevant template part to display the content.
+			get_template_part( 'template-parts/content', 'post' );
+
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
+
+		endwhile; ?>
+
+	</main>
+</div>
+
+<?php
 get_sidebar();
-
 get_footer();

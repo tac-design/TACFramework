@@ -1,6 +1,6 @@
 <?php
 /**
- * Content Page
+ * Content Post
  *
  * Template part for displaying page content in page.php
  *
