@@ -12,8 +12,10 @@
  * Example function to customise query
  * First if statement does nothing
  * Second if statement sets posts per page to 9 if the page is a post archive
+ *
+ * @param array $query is the WP query.
  */
-function tac_customise_query() {
+function tac_customise_query( $query ) {
 	if ( is_admin() || ! $query->is_main_query() ) {
 		return;
 	}
