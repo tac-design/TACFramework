@@ -1,6 +1,22 @@
-/* Visibility Classes */
+/* ==========================================================================
+   Visibility
+   ========================================================================== */
+
+/**
+ * Classes to target specific screen sizes and device types.
+ * For example, to hide an element on small screens.
+ *
+ * Example HTML:
+ *
+ * <div class="hide-for-small">
+ *     <div>This will be hidden on small screens.</div>
+ * </div>
+ *
+ */
+
 
 /* Standard (large) display targeting */
+
 .show-for-small,
 .show-for-medium,
 .show-for-medium-down,
@@ -21,9 +37,11 @@
 	display: inherit !important;
 }
 
-/* Very large display targeting */
-@media only screen and (min-width: 1441px) {
 
+/* Very large display targeting */
+
+@media only screen and (min-width: 1441px) {
+	
 	.hide-for-small,
 	.hide-for-medium,
 	.hide-for-medium-down,
@@ -32,7 +50,7 @@
 	.show-for-xlarge {
 		display: inherit !important;
 	}
-  
+	
 	.show-for-small,
 	.show-for-medium,
 	.show-for-medium-down,
@@ -43,9 +61,11 @@
 	}
 }
 
-/* Medium display targeting */
-@media only screen and (max-width: 1279px) and (min-width: 741px) {
 
+/* Medium display targeting */
+
+@media only screen and (max-width: 1279px) and (min-width: 741px) {
+	
 	.hide-for-small,
 	.show-for-medium,
 	.show-for-medium-down,
@@ -65,7 +85,9 @@
 	}
 }
 
+
 /* Small display targeting */
+
 @media only screen and (max-width: 740px) {
 	
 	.show-for-small,
@@ -76,7 +98,7 @@
 	.hide-for-xlarge {
 		display: inherit !important;
 	}
-  
+	
 	.hide-for-small,
 	.show-for-medium,
 	.hide-for-medium-down,
@@ -87,7 +109,9 @@
 	}
 }
 
+
 /* Orientation targeting */
+
 .show-for-landscape,
 .hide-for-portrait {
 	display: inherit !important;
@@ -99,7 +123,7 @@
 }
 
 @media screen and (orientation: landscape) {
-
+	
 	.show-for-landscape,
 	.hide-for-portrait {
 		display: inherit !important;
@@ -117,14 +141,16 @@
 	.hide-for-landscape {
 		display: inherit !important;
 	}
-  
+	
 	.hide-for-portrait,
 	.show-for-landscape {
 		display: none !important;
 	}
 }
 
+
 /* Touch-enabled device targeting */
+
 .show-for-touch {
 	display: none !important;
 }
@@ -141,7 +167,9 @@
 	display: none !important;
 }
 
+
 /* Specific overrides for elements that require something other than display: block */
+
 table.show-for-xlarge,
 table.show-for-large,
 table.hide-for-small,
@@ -150,7 +178,7 @@ table.hide-for-medium {
 }
 
 @media only screen and (max-width: 1279px) and (min-width: 741px) {
-
+	
 	.touch table.hide-for-xlarge,
 	.touch table.hide-for-large,
 	.touch table.hide-for-small,
