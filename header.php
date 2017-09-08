@@ -22,7 +22,7 @@
 	
 	<body <?php body_class(); ?>>
 
-		<header id="masthead" class="site-head" role="banner">
+		<header id="masthead" class="site-head">
 			<a href="<?php echo esc_html( site_url() ); ?>">
 				<img src="<?php echo esc_html( get_stylesheet_directory_uri() ); ?>/img/logo.svg" alt="<?php bloginfo( 'name' );?>">
 			</a>

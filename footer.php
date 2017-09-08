@@ -10,8 +10,8 @@
 
 ?>
 
-		<footer id="site-foot" class="site-foot" role="contentinfo">
-			<div class="site-info">
+		<footer id="site-foot" class="site-foot">
+			<div class="site-foot__info">
 				<span>&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?></span>
 			</div>
 		</footer>
