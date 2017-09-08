@@ -22,8 +22,8 @@ var onError = function (err) {
 
 gulp.task('less', function() {
 
-	return gulp
-		.src('css/style.less')
+  return gulp
+    .src('css/style.less')
         .pipe(plumber({ errorHandle: onError }))
         .pipe(less())
         .on('error', onError)
@@ -42,10 +42,11 @@ gulp.task('less', function() {
 gulp.task('js', function() {
   gulp.src([
     'js/vendor/matchheight.js',
-    'js/vendor/owl.carousel.js',
-    'js/site.js'])
-    .pipe(concat('site.min.js'))
-    .pipe(minify())
+    'js/src/site.js'])
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('js/'))
+    .pipe(concat('main-min.js'))
+    .pipe(uglify())
     .pipe(gulp.dest('js/'))
     .pipe(notify({ message: 'JS Concatinated'}));
 });
@@ -53,5 +54,5 @@ gulp.task('js', function() {
 // Watcher
 gulp.task('default', function() {
     gulp.watch('./css/*.less', ['less']);
-    gulp.watch('./js/*.js', ['js']);
+    gulp.watch('./js/src/*.js', ['js']);
 });
