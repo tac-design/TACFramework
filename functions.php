@@ -40,8 +40,8 @@ function tac_script_enqueuer() {
 		wp_register_script( 'tac_modernizr', get_stylesheet_directory_uri() . '/js/modernizr.js', array( 'jquery' ) );
 		wp_enqueue_script( 'tac_modernizr' );
 		// Site.
-		wp_register_script( 'tac_site', get_stylesheet_directory_uri() . '/js/site.min.js', array( 'jquery' ), null, true );
-		wp_enqueue_script( 'tac_site' );
+		wp_register_script( 'tac_main', get_stylesheet_directory_uri() . '/js/main.min.js', array( 'jquery' ), null, true );
+		wp_enqueue_script( 'tac_main' );
 	};
 }
 add_action( 'wp_enqueue_scripts', 'tac_script_enqueuer' );
