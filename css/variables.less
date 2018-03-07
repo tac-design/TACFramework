@@ -24,3 +24,29 @@
 /* Layout */
 
 @spacing: 8rem; /* Variable used to apply consistent spacing to blocks. */
+
+
+/* Transitions */
+
+.transition {
+	transition: all 0.1s linear;
+}
+
+
+/* Helper classes */
+
+.vertically-center {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+
+	@media only screen and (max-width: @mobile) {
+		top: 0;
+		transform: translateY(0);
+	}
+}
+
+
+/* Breakpoints */
+
+@mobile: 740px;
