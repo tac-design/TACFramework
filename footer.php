@@ -5,7 +5,7 @@
  * The template for the site footer.
  *
  * @package TAC Framework
- * @since Tac Framework 1.0
+ * @since TAC Framework 1.0
  */
 
 ?>

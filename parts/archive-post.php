@@ -5,7 +5,7 @@
  * A part file that can be used to display individual post date inside a loop.
  *
  * @package TAC Framework
- * @since Tac Framework 1.0
+ * @since TAC Framework 1.0
  */
 
 ?>
