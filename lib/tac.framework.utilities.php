@@ -5,7 +5,7 @@
  * Various minor tweaks that help with the development process.
  *
  * @package TAC Framework
- * @since Tac Framework 1.0
+ * @since TAC Framework 1.0
  */
 
 /**
