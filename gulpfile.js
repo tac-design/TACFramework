@@ -42,11 +42,9 @@ gulp.task('less', function() {
 gulp.task('js', function() {
   gulp.src([
     'js/vendor/matchheight.js',
+    'js/vendor/owl.carousel.js',
     'js/src/site.js'])
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('js/'))
-    .pipe(concat('main-min.js'))
-    .pipe(uglify())
     .pipe(gulp.dest('js/'))
     .pipe(notify({ message: 'JS Concatinated'}));
 });
