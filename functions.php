@@ -40,7 +40,7 @@ function tac_script_enqueuer() {
 		wp_register_script( 'tac_modernizr', get_stylesheet_directory_uri() . '/js/vendor/modernizr.js', array( 'jquery' ) );
 		wp_enqueue_script( 'tac_modernizr' );
 		// Site.
-		wp_register_script( 'tac_main', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery' ), null, true );
+		wp_register_script( 'tac_main', get_stylesheet_directory_uri() . '/js/main-min.js', array( 'jquery' ), null, true );
 		wp_enqueue_script( 'tac_main' );
 	};
 }
