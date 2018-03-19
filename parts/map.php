@@ -16,7 +16,7 @@
 		
 		// Asynchronously Load the map API. 
 		var script = document.createElement('script');
-		script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize&key=AIzaSyBBX-COQsQ7WcmsTtnpLxSZixutv1WNIfg";
+		script.src = "http://maps.googleapis.com/maps/api/js?callback=initialize&key=AIzaSyBBX-COQsQ7WcmsTtnpLxSZixutv1WNIfg";
 		document.body.appendChild(script);
 	});
 
@@ -60,6 +60,8 @@
 				position: position,
 				map: map,
 				title: markers[i][0],
+				size: new google.maps.Size(32, 32), // Original size of SVG (make sure this is defined in the SVG file itself or the pin won't show in Firefox).
+				scaledSize: new google.maps.Size(32, 32), // Size to display in map.
 
 				// Add size and centering attributes of defined marker.
 				icon: new google.maps.MarkerImage(image, null, null, null, new google.maps.Size(32,32)),
