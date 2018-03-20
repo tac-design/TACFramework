@@ -47,6 +47,7 @@ gulp.task('js', function() {
     'js/vendor/modal.js',
     'js/src/site.js'])
     .pipe(concat('main.js'))
+    .pipe(uglify('main.js'))
     .pipe(gulp.dest('js/'))
     .pipe(notify({ message: 'JS Concatinated'}));
 });
