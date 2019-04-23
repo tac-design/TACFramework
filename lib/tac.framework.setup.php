@@ -8,10 +8,15 @@
  * @since TAC Framework 1.0
  */
 
+
+
+
 /**
  * Add support for post thumbnails
  */
 add_theme_support( 'post-thumbnails' );
+
+
 
 
 /**
@@ -21,6 +26,8 @@ function tac_after_setup_theme() {
 	add_theme_support( 'html5', array( 'search-form' ) );
 }
 add_action( 'after_setup_theme', 'tac_after_setup_theme' );
+
+
 
 
 /**
@@ -39,6 +46,9 @@ function tac_remove_dashboard_widgets() {
 }
 add_action( 'wp_dashboard_setup', 'tac_remove_dashboard_widgets' );
 
+
+
+
 /**
  * Remove meta boxes on post editor screens that aren't needed
  */
@@ -54,6 +64,9 @@ function remove_extra_meta_boxes() {
 	remove_meta_box( 'slugdiv', 'page', 'normal' ); // page slug.
 }
 add_action( 'admin_menu' , 'remove_extra_meta_boxes' );
+
+
+
 
 /**
  * Remove dashboard menu items that aren't needed
@@ -71,6 +84,9 @@ function tac_remove_menus() {
 }
 add_action( 'admin_menu', 'tac_remove_menus' );
 
+
+
+
 /**
  * Move the Yoast SEO box to the bottom of the page editor screen.
  */
@@ -78,6 +94,22 @@ function tac_yoasttobottom() {
 	return 'low';
 }
 add_filter( 'wpseo_metabox_prio', 'tac_yoasttobottom' );
+
+
+
+
+/**
+ * Move the SEO box to the bottom of the page editor screen.
+ */
+function tac_seo_metabox_priority() {
+	// Accepts 'high', 'default', 'low'. Default is 'high'.
+	return 'low';
+}
+
+add_filter( 'the_seo_framework_metabox_priority', 'tac_seo_metabox_priority' );
+
+
+
 
 /**
  * Clean the script tag for enqueued scripts (i.e. remove type="text/javascript" etc)

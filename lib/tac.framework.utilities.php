@@ -8,6 +8,9 @@
  * @since TAC Framework 1.0
  */
 
+
+
+
 /**
  * Simple wrapper for native get_template_part()
  * Allows you to pass in an array of parts and output them in your theme
@@ -20,6 +23,9 @@ function get_template_parts( $parts = array() ) {
 		get_template_part( $part );
 	};
 }
+
+
+
 
 /**
  * Get the category id from a category name

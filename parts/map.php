@@ -16,7 +16,7 @@
 		
 		// Asynchronously Load the map API. 
 		var script = document.createElement('script');
-		script.src = "http://maps.googleapis.com/maps/api/js?callback=initialize&key=AIzaSyBBX-COQsQ7WcmsTtnpLxSZixutv1WNIfg";
+		script.src = "http://maps.googleapis.com/maps/api/js?callback=initialize&key=KEY";
 		document.body.appendChild(script);
 	});
 
