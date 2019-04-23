@@ -20,6 +20,17 @@ add_theme_support( 'post-thumbnails' );
 
 
 /**
+ * Add support for post title tags
+ */
+function tac_theme_slug_setup() {
+	add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'tac_theme_slug_setup' );
+
+
+
+
+/**
  * Add HTML5 support in search form
  */
 function tac_after_setup_theme() {
