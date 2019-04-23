@@ -17,21 +17,40 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<?php wp_head(); ?>
+		<?php
+		wp_head(); ?>
+
 	</head>
 	
 	<body <?php body_class(); ?>>
 
+		<!-- Site overlay to darken and block main content when pushy menu is open. -->
+		<div class="site-overlay"></div>
+
+		<!-- Start mobile navigation, which is initially concealed. -->
+		<nav id="mobile-navigation" class="mobile-nav pushy pushy-right">
+			<a class="menu-btn mobile-nav__close"></a>
+
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'mobile',
+				'container' => false,
+			) ); ?>
+			
+		</nav><!-- /#mobile-navigation. -->
+
+		<!-- Start site header. -->
 		<header id="masthead" class="site-head">
 			<a href="<?php echo esc_html( site_url() ); ?>">
 				<img src="<?php echo esc_html( get_stylesheet_directory_uri() ); ?>/img/logo.svg" alt="<?php bloginfo( 'name' );?>">
 			</a>
 			
-			<nav class="main-nav">
+			<!-- Start main nav. -->
+			<nav id="main-nav" class="main-nav">
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'main',
 				) ); ?>
-			</nav>
+			</nav><!-- /#main-nav. -->
 
-		</header>
+		</header><!-- /#masthead. -->

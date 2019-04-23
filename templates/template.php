@@ -10,24 +10,22 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
+<main id="main" class="site-main">
 
-		<?php
-		while ( have_posts() ) : the_post();
+	<?php
+	while ( have_posts() ) : the_post();
 
-			// Get the relevant template part to display the content.
-			get_template_part( 'template-parts/content', 'page' );
+		// Get the relevant template part to display the content.
+		get_template_part( 'template-parts/content', 'page' );
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) :
+			comments_template();
+		endif;
 
-		endwhile; ?>
+	endwhile; ?>
 
-	</main>
-</div>
+</main>
 
 <?php
 get_footer();

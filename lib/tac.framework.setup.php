@@ -5,7 +5,7 @@
  * A file in which setup and optimisation of the WP CMS is done
  *
  * @package TAC Framework
- * @since Tac Framework 1.0
+ * @since TAC Framework 1.0
  */
 
 /**
@@ -70,3 +70,24 @@ function tac_remove_menus() {
 	}
 }
 add_action( 'admin_menu', 'tac_remove_menus' );
+
+/**
+ * Move the Yoast SEO box to the bottom of the page editor screen.
+ */
+function tac_yoasttobottom() {
+	return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'tac_yoasttobottom' );
+
+/**
+ * Clean the script tag for enqueued scripts (i.e. remove type="text/javascript" etc)
+ *
+ * @param string $tag is the script tag.
+ * @param string $handle is the handle.
+ */
+function tac_tidy_scrip_tag( $tag, $handle ) {
+	return preg_replace( "/type=['\"]text\/(javascript|css)['\"]/", '', $tag );
+}
+
+add_filter( 'style_loader_tag', 'tac_tidy_scrip_tag', 10, 2 );
+add_filter( 'script_loader_tag', 'tac_tidy_scrip_tag', 10, 2 );

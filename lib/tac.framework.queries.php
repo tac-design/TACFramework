@@ -5,7 +5,7 @@
  * A file in which any manipulation of queries is done.
  *
  * @package TAC Framework
- * @since Tac Framework 1.0
+ * @since TAC Framework 1.0
  */
 
 /**

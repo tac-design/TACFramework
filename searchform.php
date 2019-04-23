@@ -5,7 +5,7 @@
  * The template for displaying a search form.
  *
  * @package TAC Framework
- * @since Tac Framework 1.0
+ * @since TAC Framework 1.0
  */
 
 ?>

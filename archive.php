@@ -11,22 +11,20 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
-	<main id="main" class="site-main">
+<main id="main" class="site-main">
 
-		<?php
-		if ( have_posts() ) : while ( have_posts() ) : the_post();
-				get_template_part( 'parts/archive-post' );
-		endwhile;
-		else : ?>
+	<?php
+	if ( have_posts() ) : while ( have_posts() ) : the_post();
+			get_template_part( 'parts/archive-post' );
+	endwhile;
+	else : ?>
 
-		<p>No posts to display</p>
+	<p>No posts to display</p>
 
-		<?php
-		endif; ?>
+	<?php
+	endif; ?>
 
-	</main>
-</div>
+</main>
 
 <?php
 get_sidebar();

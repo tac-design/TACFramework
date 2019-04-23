@@ -6,7 +6,7 @@
  * This file links to four files in the lib directors that should be removed if necessary.
  *
  * @package TAC Framework
- * @since Tac Framework 1.0
+ * @since TAC Framework 1.0
  */
 
 /**
@@ -37,10 +37,10 @@ add_action( 'wp_enqueue_scripts', 'tac_css_enqueuer' );
 function tac_script_enqueuer() {
 	if ( ! is_admin() ) {
 		// Modernizr.
-		wp_register_script( 'tac_modernizr', get_stylesheet_directory_uri() . '/js/modernizr.js', array( 'jquery' ) );
+		wp_register_script( 'tac_modernizr', get_stylesheet_directory_uri() . '/js/vendor/modernizr.js', array( 'jquery' ) );
 		wp_enqueue_script( 'tac_modernizr' );
 		// Site.
-		wp_register_script( 'tac_main', get_stylesheet_directory_uri() . '/js/main.min.js', array( 'jquery' ), null, true );
+		wp_register_script( 'tac_main', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery' ), null, true );
 		wp_enqueue_script( 'tac_main' );
 	};
 }
