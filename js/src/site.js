@@ -1,8 +1,6 @@
 (function($) {
 
 
-
-
 	/* Simple accordion */
 
 	var allPanels = $('.js-accordion > dd').hide();
@@ -13,8 +11,5 @@
 		return false;
 	});
 
-
-
-	
 	
 });
