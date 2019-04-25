@@ -1,3 +1,19 @@
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
+/**
+ * A simple grid that uses flexbox.
+ *
+ */
+
+
+
+
+/**
+ * The grid container.
+ */
+
 .grid {
     box-sizing: border-box;
     display: -webkit-flex;
@@ -16,7 +32,8 @@
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin: 0 -8px 0 -8px
+    margin: 0 -@gutter 0 -@gutter
+    padding: 0 @site-padding;
 }
 
 .grid.grid-nogutter {
@@ -26,6 +43,13 @@
 .grid.grid-nogutter>.col {
     padding: 0
 }
+
+
+
+
+/**
+ * Common styles for each column in the grid.
+ */
 
 .col {
     box-sizing: border-box;
@@ -41,8 +65,15 @@
     flex-basis: 0;
     max-width: 100%;
     min-width: 0;
-    padding: 0 8px 0 8px
+    padding: 0 @gutter 0 @gutter
 }
+
+
+
+
+/**
+ * Classes to control the vertical alignment of columns in the grid.
+ */
 
 .col-align-top {
     -webkit-align-self: flex-start;
@@ -59,6 +90,13 @@
     -ms-flex-item-align: center;
     align-self: center
 }
+
+
+
+
+/**
+ * Classes to control the vertical order of columns in the grid.
+ */
 
 .col-top {
     justify-content: flex-start !important;
@@ -77,6 +115,13 @@
     flex-direction: column;
     display: flex
 }
+
+
+
+
+/**
+ * Classes to justify the positioning of content within the grid horizontally.
+ */
 
 .grid-start {
     -webkit-box-pack: start;
@@ -106,6 +151,13 @@
     justify-content: space-between
 }
 
+
+
+
+/**
+ * Manually assign first and last positions to specific columns.
+ */
+
 .col-first {
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
@@ -118,6 +170,13 @@
     order: 1
 }
 
+
+
+
+/**
+ * Apply this class to the grid level everse the direction of its columns.
+ */
+
 .grid-reverse {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -125,9 +184,23 @@
     flex-direction: row-reverse
 }
 
+
+
+
+/**
+ * Fix the position of a column.
+ */
+
 .col-fixed {
     flex: initial
 }
+
+
+
+
+/**
+ * Classes to make a column grow a specified distance.
+ */
 
 .col-grow-2 {
     flex-grow: 2
@@ -168,6 +241,14 @@
 .col-grow-11 {
     flex-grow: 11
 }
+
+
+
+
+/**
+ * If it's necessary to assign specific column widths, here are some classes
+ * to do that.
+ */
 
 .col-1 {
     -ms-flex-preferred-size: 8.33333%;
@@ -252,6 +333,15 @@
     flex-basis: 100%;
     max-width: 100%
 }
+
+
+
+
+/**
+ * The following media queries define when a column will stretch to 100% width.
+ * So for example, a 50% column on a large screen can be set to stretch 100%
+ * on medium and small screens.
+ */
 
 @media only screen and (max-width: @small) {
     .col-sm {
