@@ -105,3 +105,42 @@ register_nav_menus( array(
 	'main' => 'Main Navigation',
 	'mobile' => 'Mobile Navigation',
 ) );
+
+
+
+
+/**
+ * Check if more than one page of posts exist.
+ */
+function tac_is_paginated() {
+	global $wp_query;
+	return ( $wp_query->max_num_pages > 1 );
+}
+
+
+
+
+/**
+ * Custom excerpt length.
+ *
+ * @param name $length is excerpt length.
+ */
+function tac_custom_excerpt_length( $length ) {
+	return 15;
+}
+
+add_filter( 'excerpt_length', 'tac_custom_excerpt_length', 999 );
+
+
+
+
+/**
+ * Customise the excerpt text.
+ *
+ * @param name $more is the text that immediately follows the excerpt.
+ */
+function tac_new_excerpt_more( $more ) {
+	return '...';
+}
+
+add_filter( 'excerpt_more', 'tac_new_excerpt_more' );
