@@ -1,0 +1,435 @@
+[
+    {
+        "key": "group_5cc02a3356f15",
+        "title": "Page Content",
+        "fields": [
+            {
+                "key": "field_5cc02a37c3d8f",
+                "label": "Content Blocks",
+                "name": "content_blocks",
+                "type": "flexible_content",
+                "instructions": "Create flexible, unique layouts with content blocks.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layouts": {
+                    "layout_5cc02a3e9c9b2": {
+                        "key": "layout_5cc02a3e9c9b2",
+                        "name": "text_area",
+                        "label": "Text Area",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5cc068088d445",
+                                "label": "Title",
+                                "name": "title",
+                                "type": "text",
+                                "instructions": "The title for this block.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "35",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_5cc02a56fc31b",
+                                "label": "Content",
+                                "name": "content",
+                                "type": "wysiwyg",
+                                "instructions": "The main content for this block.",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "65",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "visual",
+                                "toolbar": "full",
+                                "media_upload": 0,
+                                "delay": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_5cc03bf85787a": {
+                        "key": "layout_5cc03bf85787a",
+                        "name": "text_image",
+                        "label": "Text & Image",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5cc03bf85787b",
+                                "label": "Image",
+                                "name": "image",
+                                "type": "image",
+                                "instructions": "Upload an image that is at least 999px x 999px, jpg only.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "100",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "id",
+                                "preview_size": "medium",
+                                "library": "all",
+                                "min_width": "",
+                                "min_height": "",
+                                "min_size": "",
+                                "max_width": "",
+                                "max_height": "",
+                                "max_size": "",
+                                "mime_types": "jpg, jpeg"
+                            },
+                            {
+                                "key": "field_5cc03bf85787c",
+                                "label": "Content",
+                                "name": "content",
+                                "type": "wysiwyg",
+                                "instructions": "The main content for this block.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "100",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "visual",
+                                "toolbar": "full",
+                                "media_upload": 0,
+                                "delay": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_5cc0665ce4e1e": {
+                        "key": "layout_5cc0665ce4e1e",
+                        "name": "cards",
+                        "label": "Cards",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5cc06669e4e1f",
+                                "label": "Card",
+                                "name": "card",
+                                "type": "repeater",
+                                "instructions": "Add multiple cards to display highlighted content.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "collapsed": "field_5cc066b5e4e21",
+                                "min": 0,
+                                "max": 0,
+                                "layout": "block",
+                                "button_label": "Add Card",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_5cc0668de4e20",
+                                        "label": "Image",
+                                        "name": "image",
+                                        "type": "image",
+                                        "instructions": "Upload an image that is at least 999px x 999px, jpg only.",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "return_format": "id",
+                                        "preview_size": "medium",
+                                        "library": "all",
+                                        "min_width": "",
+                                        "min_height": "",
+                                        "min_size": "",
+                                        "max_width": "",
+                                        "max_height": "",
+                                        "max_size": "",
+                                        "mime_types": "jpg, jpeg"
+                                    },
+                                    {
+                                        "key": "field_5cc066b5e4e21",
+                                        "label": "Title",
+                                        "name": "title",
+                                        "type": "text",
+                                        "instructions": "The title for this card.",
+                                        "required": 1,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "35",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": "",
+                                        "maxlength": ""
+                                    },
+                                    {
+                                        "key": "field_5cc066c8e4e22",
+                                        "label": "Content",
+                                        "name": "content",
+                                        "type": "textarea",
+                                        "instructions": "The paragraph text for this card.",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "65",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": "",
+                                        "maxlength": "",
+                                        "rows": "",
+                                        "new_lines": "wpautop"
+                                    },
+                                    {
+                                        "key": "field_5cc066dce4e23",
+                                        "label": "Link",
+                                        "name": "link",
+                                        "type": "page_link",
+                                        "instructions": "Where should this card link to?",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "post_type": [
+                                            "page"
+                                        ],
+                                        "taxonomy": "",
+                                        "allow_null": 0,
+                                        "allow_archives": 0,
+                                        "multiple": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_5cc068b6a081b": {
+                        "key": "layout_5cc068b6a081b",
+                        "name": "accordion",
+                        "label": "Accordion",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5cc069accea8e",
+                                "label": "Title",
+                                "name": "title",
+                                "type": "text",
+                                "instructions": "The title for this block.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_5cc069b8cea8f",
+                                "label": "Accordion Items",
+                                "name": "accordion_items",
+                                "type": "repeater",
+                                "instructions": "Add multiple blocks of content that will be displayed in an accordion.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "collapsed": "field_5cc06a70cea90",
+                                "min": 0,
+                                "max": 0,
+                                "layout": "block",
+                                "button_label": "Add Accordion Item",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_5cc06a70cea90",
+                                        "label": "Title",
+                                        "name": "title",
+                                        "type": "text",
+                                        "instructions": "The title for this accordion item.",
+                                        "required": 1,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "35",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": "",
+                                        "maxlength": ""
+                                    },
+                                    {
+                                        "key": "field_5cc06b0bcea91",
+                                        "label": "Content",
+                                        "name": "content",
+                                        "type": "wysiwyg",
+                                        "instructions": "The paragraph text for this accordion item.",
+                                        "required": 1,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "65",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "tabs": "visual",
+                                        "toolbar": "full",
+                                        "media_upload": 0,
+                                        "delay": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_5cc0686aa0819": {
+                        "key": "layout_5cc0686aa0819",
+                        "name": "full_width_image",
+                        "label": "Full Width Image",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5cc06884a081a",
+                                "label": "Image",
+                                "name": "image",
+                                "type": "image",
+                                "instructions": "Upload an image that is at least 999px x 999px, jpg only.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "id",
+                                "preview_size": "large",
+                                "library": "all",
+                                "min_width": "",
+                                "min_height": "",
+                                "min_size": "",
+                                "max_width": "",
+                                "max_height": "",
+                                "max_size": "",
+                                "mime_types": "jpg, jpeg"
+                            },
+                            {
+                                "key": "field_5cc068cca081c",
+                                "label": "Full Bleed?",
+                                "name": "full_bleed",
+                                "type": "true_false",
+                                "instructions": "Check this box to make the image stretch the full width of the viewport, rather than be constrained by the grid.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "message": "",
+                                "default_value": 0,
+                                "ui": 0,
+                                "ui_on_text": "",
+                                "ui_off_text": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_5cc06d5b9bcec": {
+                        "key": "layout_5cc06d5b9bcec",
+                        "name": "gallery",
+                        "label": "Gallery",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5cc06d609bced",
+                                "label": "Gallery Items",
+                                "name": "gallery_items",
+                                "type": "gallery",
+                                "instructions": "Add multiple images that will be displayed in a gallery. Upload images that are at least 999px x 999px, jpg only.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "min": "",
+                                "max": "",
+                                "insert": "append",
+                                "library": "all",
+                                "min_width": "",
+                                "min_height": "",
+                                "min_size": "",
+                                "max_width": "",
+                                "max_height": "",
+                                "max_size": "",
+                                "mime_types": "jpg, jpeg"
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    }
+                },
+                "button_label": "Add Block",
+                "min": "",
+                "max": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ]
+        ],
+        "menu_order": 100,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]
