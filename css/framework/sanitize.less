@@ -613,7 +613,7 @@ a {
   text-decoration: none;
   background-color: transparent; }
   a:hover, a:focus {
-    color: #0062cc;
+    color: darken(@primary, 15%);
     text-decoration: underline; }
 
 dl {
@@ -726,14 +726,14 @@ input[type="color"]:focus,
 select:focus,
 textarea:focus {
   background-color: #fff;
-  border-color: lighten(@brand, 15%);
+  border-color: lighten(@primary, 15%);
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
 
 input:not([type]):focus {
   background-color: #fff;
-  border-color: lighten(@brand, 15%);
+  border-color: lighten(@primary, 15%);
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
@@ -845,7 +845,7 @@ button {
       -ms-user-select: none;
           user-select: none;
   border: 1px solid transparent;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.5;
   -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
@@ -879,8 +879,8 @@ input[type=reset]:focus,
 input[type=button]:focus,
 button:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); }
+  -webkit-box-shadow: 0 0 0 0.2rem lighten(@primary, 15%);
+          box-shadow: 0 0 0 0.2rem lighten(@primary, 15%); }
 
 input[type=submit]:disabled,
 input[type=reset]:disabled,

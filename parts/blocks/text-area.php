@@ -2,7 +2,7 @@
 /**
  * Flexible - Text
  *
- * Template part for show text areas in a fleixble layout.
+ * Template part for displaying text areas in a fleixble layout.
  *
  * @package TAC Framework
  * @since TAC Framework 1.0

@@ -1,9 +1,8 @@
-(function($) {
-
+jQuery(document).ready(function($) {
 
 	/* Simple accordion */
 
-	var allPanels = $('.js-accordion > dd').hide();
+	var allPanels = $('.accordion > dd').hide();
     
 	$('.accordion > dt > a').click(function() {
 		allPanels.slideUp();

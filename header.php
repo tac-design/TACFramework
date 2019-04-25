@@ -41,16 +41,22 @@
 
 		<!-- Start site header. -->
 		<header id="masthead" class="site-head">
-			<a href="<?php echo esc_html( site_url() ); ?>">
-				<img src="<?php echo esc_html( get_stylesheet_directory_uri() ); ?>/img/logo.svg" alt="<?php bloginfo( 'name' );?>">
-			</a>
+			<div class="grid grid-end">
+				<div class="col">
+					<a class="site-logo" href="<?php echo esc_html( site_url() ); ?>">
+						<img src="<?php echo esc_html( get_stylesheet_directory_uri() ); ?>/img/logo.svg" alt="<?php bloginfo( 'name' );?>">
+					</a>
+				</div>
+				<div class="col">
 			
-			<!-- Start main nav. -->
-			<nav id="main-nav" class="main-nav">
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'main',
-				) ); ?>
-			</nav><!-- /#main-nav. -->
+					<!-- Start main nav. -->
+					<nav id="main-nav" class="main-nav">
+						<?php
+						wp_nav_menu( array(
+							'theme_location' => 'main',
+						) ); ?>
+					</nav><!-- /#main-nav. -->
 
+				</div>
+			</div>
 		</header><!-- /#masthead. -->
