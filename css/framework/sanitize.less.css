@@ -609,7 +609,7 @@ code {
   word-wrap: break-word; }
 
 a {
-  color: #007bff;
+  color: @primary;
   text-decoration: none;
   background-color: transparent; }
   a:hover, a:focus {
@@ -726,14 +726,14 @@ input[type="color"]:focus,
 select:focus,
 textarea:focus {
   background-color: #fff;
-  border-color: #80bdff;
+  border-color: lighten(@brand, 15%);
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
 
 input:not([type]):focus {
   background-color: #fff;
-  border-color: #80bdff;
+  border-color: lighten(@brand, 15%);
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
@@ -830,8 +830,8 @@ input[type=submit],
 input[type=reset],
 input[type=button],
 button {
-  background-color: #007bff;
-  border: #007bff;
+  background-color: @primary;
+  border: @primary;
   border-radius: 4px;
   color: #fff;
   padding: 8px 16px;
@@ -862,16 +862,16 @@ input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover,
 button:hover {
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: darken(@primary, 15%);
+  border-color: darken(@primary, 15%);
   color: #fff; }
 
 input[type=submit]:not(:disabled):active,
 input[type=reset]:not(:disabled):active,
 input[type=button]:not(:disabled):active,
 button:not(:disabled):active {
-  background-color: #0062cc;
-  border-color: #005cbf;
+  background-color: darken(@primary, 15%);
+  border-color: darken(@primary, 15%);
   color: #fff; }
 
 input[type=submit]:focus,
@@ -888,8 +888,8 @@ input[type=button]:disabled,
 button:disabled {
   opacity: .65;
   cursor: not-allowed;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: @mid-grey;
+  border-color: @mid-grey;
   color: #fff; }
 
 table {
