@@ -11,8 +11,26 @@
 $images = get_sub_field( 'gallery_items' );
 $size = 'gallery';
 
-if( $images ):
-	foreach( $images as $image ):
-		echo wp_get_attachment_image( $image['ID'], $size );
-    endforeach;
+if( $images ) : ?>
+
+	<section class="block spacing spacing--bottom-only">
+		<div class="grid">
+
+			<?php
+			foreach( $images as $image ): ?>
+
+				<div class="col col-3">
+
+					<?php
+					echo wp_get_attachment_image( $image['ID'], $size ); ?>
+
+				</div>
+
+	    	<?php
+	    	endforeach; ?>
+
+	    </div>
+	</section>
+
+<?php
 endif;

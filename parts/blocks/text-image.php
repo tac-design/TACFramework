@@ -8,18 +8,32 @@
  * @since TAC Framework 1.0
  */
 
+?>
 
-// Get the image.
-$image = get_sub_field( 'image' );
+<section class="block spacing spacing--bottom-only">
+	<div class="grid">
+		<div class="col col-6">
 
-if ( $image ) :
+			<?php
+			// Get the image.
+			$image = get_sub_field( 'image' );
 
-	// Get the ID of the image and use it to get the alt text.
-	$image_alt = get_post_meta( $image, '_wp_attachment_image_alt', true ); ?>
+			if ( $image ) :
 
-	<img <?php tac_acf_responsive_image( get_sub_field( 'image' ), 'text-image', '1000px' ); ?>  alt="<?php echo esc_html( $image_alt ); ?>" /> 
+				// Get the ID of the image and use it to get the alt text.
+				$image_alt = get_post_meta( $image, '_wp_attachment_image_alt', true ); ?>
 
-<?php
-endif;
+				<img <?php tac_acf_responsive_image( get_sub_field( 'image' ), 'text-image', '1000px' ); ?>  alt="<?php echo esc_html( $image_alt ); ?>" /> 
 
-the_sub_field( 'text' );
+			<?php
+			endif; ?>
+
+		</div>
+		<div class="col col-6">
+
+			<?php
+			the_sub_field( 'text' ); ?>
+
+		</div>
+	</div>
+</section>

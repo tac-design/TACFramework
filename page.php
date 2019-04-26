@@ -11,20 +11,15 @@
 get_header(); ?>
 
 <main id="main" class="site-main">
-	<div class="grid">
-		<div class="col">
 
-			<?php
-			while ( have_posts() ) : the_post();
+	<?php
+	while ( have_posts() ) : the_post();
 
-				the_content();
+		get_template_part( 'parts/banner' );
 
-				get_template_part( 'parts/content', 'flexible' );
+		get_template_part( 'parts/content', 'page' );
 
-			endwhile; ?>
-
-		</div>
-	</div>
+	endwhile; ?>
 
 </main>
 

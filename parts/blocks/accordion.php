@@ -8,39 +8,50 @@
  * @since TAC Framework 1.0
  */
 
+?>
 
-$has_title = get_sub_field( 'title' );
+<section class="block spacing spacing--bottom-only">
+	<div class="grid">
+		<div class="col col-8">
 
-if ( $has_title ) : ?>
+			<?php
+			$has_title = get_sub_field( 'title' );
 
-	<h2><?php the_sub_field( 'title' ); ?></h2>
+			if ( $has_title ) : ?>
 
-<?php
-endif;
+				
+				<h2><?php the_sub_field( 'title' ); ?></h2>
 
-// Check if this group has any items.
-if ( have_rows( 'accordion_items' ) ) : ?>
+			<?php
+			endif;
 
-	<dl class="accordion">
+			// Check if this group has any items.
+			if ( have_rows( 'accordion_items' ) ) : ?>
 
-		<?php
-		// Loop through the rows of data.
-		while ( have_rows( 'accordion_items' ) ) : the_row(); ?>
+				<dl class="js-accordion accordion">
 
-			<dt>
-				<a href="#"><?php the_sub_field( 'title' ); ?></a>
-			</dt>
-			<dd>
+					<?php
+					// Loop through the rows of data.
+					while ( have_rows( 'accordion_items' ) ) : the_row(); ?>
 
-				<?php
-				the_sub_field( 'content' ); ?>
+						<dt>
+							<a href="#"><?php the_sub_field( 'title' ); ?></a>
+						</dt>
+						<dd>
 
-			</dd>
+							<?php
+							the_sub_field( 'content' ); ?>
 
-		<?php
-		endwhile; ?>
+						</dd>
 
-	</dl>
+					<?php
+					endwhile; ?>
 
-<?php
-endif;
+				</dl>
+
+			<?php
+			endif; ?>
+
+		</div>
+	</div>
+</section>

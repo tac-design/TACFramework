@@ -44,7 +44,7 @@ gulp.task('js', function() {
     'js/vendor/matchheight.js',
     'js/vendor/owl.carousel.js',
     'js/vendor/pushy.js',
-    'js/vendor/modal.js',
+    'js/vendor/micromodal.js',
     'js/src/site.js'])
     .pipe(concat('main.js'))
     .pipe(uglify('main.js'))

@@ -8,46 +8,61 @@
  * @since TAC Framework 1.0
  */
 
-
 // Check if this group has any items.
-if ( have_rows( 'card' ) ) :
+if ( have_rows( 'card' ) ) : ?>
 
-	// Loop through the rows of data.
-	while ( have_rows( 'card' ) ) : the_row();
+	<section class="block spacing spacing--bottom-only">
+		<div class="grid">
 
-		// Get the image.
-		$image = get_sub_field( 'image' );
+			<?php
+			// Loop through the rows of data.
+			while ( have_rows( 'card' ) ) : the_row(); ?>
 
-		if ( $image ) :
+				<div class="col col-4">
+					<div class="card">
 
-			// Get the ID of the image and use it to get the alt text.
-			$image_alt = get_post_meta( $image, '_wp_attachment_image_alt', true ); ?>
+						<?php
+						// Get the image.
+						$image = get_sub_field( 'image' );
 
-			<img <?php tac_acf_responsive_image( get_sub_field( 'image' ), 'card', '600px' ); ?>  alt="<?php echo esc_html( $image_alt ); ?>" /> 
+						if ( $image ) :
 
-		<?php
-		endif; ?>
+							// Get the ID of the image and use it to get the alt text.
+							$image_alt = get_post_meta( $image, '_wp_attachment_image_alt', true ); ?>
 
-		<h2><?php the_sub_field( 'title' ); ?></h2>
+							<img <?php tac_acf_responsive_image( get_sub_field( 'image' ), 'card', '600px' ); ?>  alt="<?php echo esc_html( $image_alt ); ?>" /> 
 
-		<?php
-		// Check if this card has paragraph content and if it does display it.
-		$has_content = get_sub_field( 'content' );
+						<?php
+						endif; ?>
 
-		if ( $has_content ) :
-			the_sub_field( 'content' );
-		endif;
+						<h2><?php the_sub_field( 'title' ); ?></h2>
 
-		// Check if this card has a link and if it does display it.
-		$has_link = get_sub_field( 'link' );
+						<?php
+						// Check if this card has paragraph content and if it does display it.
+						$has_content = get_sub_field( 'content' );
 
-		if ( $has_link ) : ?>
+						if ( $has_content ) :
+							the_sub_field( 'content' );
+						endif;
 
-			<a href="<?php the_sub_field( 'link' ); ?>"><button>Read more</button></a>
+						// Check if this card has a link and if it does display it.
+						$has_link = get_sub_field( 'link' );
 
-		<?php
-		endif;
+						if ( $has_link ) : ?>
 
-	endwhile;
+							<a href="<?php the_sub_field( 'link' ); ?>"><button>Read more</button></a>
 
+						<?php
+						endif; ?>
+
+					</div>
+				</div>
+
+			<?php
+			endwhile; ?>
+
+		</div>
+	</section>
+
+<?php
 endif;

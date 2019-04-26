@@ -8,15 +8,26 @@
  * @since TAC Framework 1.0
  */
 
+?>
 
-// Check if there's a title and if there is display it.
-$has_title = get_sub_field( 'title' );
+<section class="block spacing spacing--bottom-only">
+	<div class="grid">
+		<div class="col col-8">
 
-if ( $has_title ) : ?>
+			<?php
+			// Check if there's a title and if there is display it.
+			$has_title = get_sub_field( 'title' );
 
-	<h2><?php the_sub_field( 'title' ); ?></h2>
+			if ( $has_title ) : ?>
 
-<?php
-endif;
+				<h2><?php the_sub_field( 'title' ); ?></h2>
 
-the_sub_field( 'content' ); ?>
+			<?php
+			endif; ?>
+
+			<?php
+			the_sub_field( 'content' ); ?>
+
+		</div>
+	</div>
+</section>

@@ -19,6 +19,8 @@
 		<?php
 		get_template_part( 'parts/schema' );
 
+		get_template_part( 'parts/modal' );
+
 		wp_footer(); ?>
 
 	</body>
