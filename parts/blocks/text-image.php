@@ -32,7 +32,7 @@
 		<div class="col col-6">
 
 			<?php
-			the_sub_field( 'text' ); ?>
+			the_sub_field( 'content' ); ?>
 
 		</div>
 	</div>

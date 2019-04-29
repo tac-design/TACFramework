@@ -10,7 +10,7 @@
 
 ?>
 
-<section class="block spacing spacing--bottom-only">
+<section class="block spacing background-primary margin margin--bottom-only">
 	<div class="grid">
 		<div class="col col-8">
 
