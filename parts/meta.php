@@ -14,22 +14,38 @@
 
 
 <?php
-// Show the post categories as an unordered list with links.
-echo get_the_category_list();
+// Show the post categories as an unordered list without links. ?>
+<ul>
+  <?php
+  foreach (get_categories() as $category){
+    echo "<li>";
+    echo $category->name;
+    echo "</li>";
+  } ?>
+</ul>
 
 
+<?php
 // As an alternative, show only the first category.
 $categories = get_the_category();
  
 if ( ! empty( $categories ) ) {
-    echo esc_html( $categories[0]->name );   
+    echo '<p>' . esc_html( $categories[0]->name ) . '</p>';   
 }
 
 
-// Show the values for a custom taxonomy called 'tax'.
+// Show the values for a custom taxonomy called 'tax' in an unordered list.
+$terms = wp_get_object_terms( $post->ID,  'custom' );
+if ( ! empty( $terms ) ) :
+	if ( ! is_wp_error( $terms ) ) :
+		echo '<ul>';
+			foreach( $terms as $term ) :
+				echo '<li>' . esc_html( $term->name ) . '</li>'; 
+			endforeach;
+		echo '</ul>';
+	endif;
+endif;
 
-echo get_the_term_list( $post->ID, 'tax', 'Title: ', ', ' );
 
-
-// The author of the post, with a link to their archive.
-the_author();
+// The author of the post. ?>
+<p>Written by: <?php the_author(); ?></p>

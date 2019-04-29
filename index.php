@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-<section id="archive" class="archive">
+<section id="archive" class="archive spacing spacing--bottom-only">
 	<div class="grid">
 		<div class="col col-12">
 

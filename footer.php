@@ -10,7 +10,7 @@
 
 ?>
 
-			<footer id="site-foot" class="site-foot">
+			<footer id="site-foot" class="site-foot spacing">
 				<div class="site-foot__info">
 					<span>&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?></span>
 				</div>
