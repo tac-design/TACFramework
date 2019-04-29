@@ -62,3 +62,5 @@
 				</div>
 			</div>
 		</header><!-- /#masthead. -->
+
+		<main id="main" class="site-main">

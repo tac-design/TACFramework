@@ -10,11 +10,13 @@
 
 ?>
 
-		<footer id="site-foot" class="site-foot">
-			<div class="site-foot__info">
-				<span>&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?></span>
-			</div>
-		</footer>
+			<footer id="site-foot" class="site-foot">
+				<div class="site-foot__info">
+					<span>&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?></span>
+				</div>
+			</footer>
+
+		</main>
 
 		<?php
 		get_template_part( 'parts/schema' );

@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-<main id="main" class="site-main">
+<article id="page" class="content">
 
 	<?php
 	while ( have_posts() ) : the_post();
@@ -21,7 +21,7 @@ get_header(); ?>
 
 	endwhile; ?>
 
-</main>
+</article>
 
 <?php
 get_footer();

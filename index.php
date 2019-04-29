@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-<main id="main" class="site-main">
+<section id="archive" class="archive">
 	<div class="grid">
 		<div class="col col-12">
 

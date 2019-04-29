@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-<main id="main" class="site-main">
+<article id="search-results" class="content">
 
 	<?php if ( have_posts() ) : ?>
 		<h1>Search Results for '<?php echo get_search_query(); ?>'</h1>	
