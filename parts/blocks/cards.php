@@ -5,7 +5,7 @@
  * Template part for displaying a repeating group of cards in a grid.
  *
  * @package TAC Framework
- * @since TAC Framework 1.0
+ * @since TAC Framework 2.0
  */
 
 // Check if this group has any items.

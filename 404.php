@@ -5,7 +5,7 @@
  * The default 404 template used in the theme.
  *
  * @package TAC Framework
- * @since TAC Framework 1.0
+ * @since TAC Framework 2.0
  */
 
 get_header(); ?>

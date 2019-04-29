@@ -5,7 +5,7 @@
  * An example modal using the Micromodal library.
  *
  * @package TAC Framework
- * @since TAC Framework 1.0
+ * @since TAC Framework 2.0
  */
 
 ?>

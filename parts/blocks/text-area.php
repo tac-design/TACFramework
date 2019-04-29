@@ -5,7 +5,7 @@
  * Template part for displaying text areas in a fleixble layout.
  *
  * @package TAC Framework
- * @since TAC Framework 1.0
+ * @since TAC Framework 2.0
  */
 
 ?>

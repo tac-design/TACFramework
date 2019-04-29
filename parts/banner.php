@@ -5,7 +5,7 @@
  * A simple banner that contains a button that calls a modal.
  *
  * @package TAC Framework
- * @since TAC Framework 1.0
+ * @since TAC Framework 2.0
  */
 
 ?>

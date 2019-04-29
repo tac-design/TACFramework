@@ -5,7 +5,7 @@
  * A file in which setup and optimisation of the WP CMS is done
  *
  * @package TAC Framework
- * @since TAC Framework 1.0
+ * @since TAC Framework 2.0
  */
 
 

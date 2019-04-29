@@ -4,8 +4,8 @@
  *
  * Gets the meta data for a post. Delete as appropriate.
  *
- * @package TAC Framework 1.0
- * @since TAC Framework 1.0
+ * @package TAC Framework
+ * @since TAC Framework 2.0
  */
 
 ?>

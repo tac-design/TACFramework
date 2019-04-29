@@ -5,7 +5,7 @@
  * Template part for displaying an image gallery.
  *
  * @package TAC Framework
- * @since TAC Framework 1.0
+ * @since TAC Framework 2.0
  */
 
 $images = get_sub_field( 'gallery_items' );

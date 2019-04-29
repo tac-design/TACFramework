@@ -4,8 +4,8 @@
  *
  * Links to previous and next posts.
  *
- * @package NNP
- * @since NNP 1.0
+ * @package TAC Framework
+ * @since TAC Framework 2.0
  */
 
 

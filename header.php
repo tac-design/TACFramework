@@ -5,7 +5,7 @@
  * The template for the site header. Displays everything up to the main content.
  *
  * @package TAC Framework
- * @since TAC Framework 1.0
+ * @since TAC Framework 2.0
  */
 
 ?>

@@ -5,7 +5,7 @@
  * A basic file for a page template.
  *
  * @package TAC Framework
- * @since TAC Framework 1.0
+ * @since TAC Framework 2.0
  */
 
 get_header(); ?>

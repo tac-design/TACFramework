@@ -5,7 +5,7 @@
  * Template part for displaying a repeating group of content in an accordion.
  *
  * @package TAC Framework
- * @since TAC Framework 1.0
+ * @since TAC Framework 2.0
  */
 
 ?>
