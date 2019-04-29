@@ -15,7 +15,6 @@
 /**
  * Include files from the lib directory
  */
-
 require_once( 'lib/tac.framework.posts.php' );
 require_once( 'lib/tac.framework.setup.php' );
 require_once( 'lib/tac.framework.queries.php' );
@@ -28,7 +27,6 @@ require_once( 'lib/tac.framework.utilities.php' );
  * Enqueue CSS
  * Main CSS file and fontawesome
  */
-
 function tac_css_enqueuer() {
 	wp_register_style( 'tac_main', get_stylesheet_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'tac_main' );
@@ -43,7 +41,6 @@ add_action( 'wp_enqueue_scripts', 'tac_css_enqueuer' );
 /**
  * Enqueue JS
  */
-
 function tac_script_enqueuer() {
 	if ( ! is_admin() ) {
 		// Modernizr.
@@ -63,7 +60,6 @@ add_action( 'wp_enqueue_scripts', 'tac_script_enqueuer' );
  * Include favicons and touch icons
  * Only include favicon png and max size apple-touch-icon as per HTML5 Boilerplate
  */
-
 function tac_add_favicon() {
 	?>
 	<link rel="shortcut icon" href="<?php echo esc_html( get_stylesheet_directory_uri() ); ?>/img/favicon.png"/>
@@ -79,7 +75,6 @@ add_action( 'wp_head' , 'tac_add_favicon' );
 /**
  * Create a widget area
  */
-
 function tac_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Widget Area' ),
@@ -100,11 +95,19 @@ add_action( 'widgets_init', 'tac_widgets_init' );
  * Register menus
  * Main and Mobile
  */
-
 register_nav_menus( array(
 	'main' => 'Main Navigation',
-	'mobile' => 'Mobile Navigation',
 ) );
+
+
+
+
+/**
+ * Add image sizes
+ */
+add_image_size( 'banner', 1800, 600, true );
+add_image_size( 'text-image', 900, 600, true );
+add_image_size( 'card', 400, 300, true );
 
 
 
