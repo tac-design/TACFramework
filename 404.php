@@ -18,7 +18,6 @@ get_header(); ?>
 	<ul>
 		<li>Return to the <a href="<?php echo esc_html( site_url() ); ?>">home page</a></li>
 		<li>Find out how to contact us</li>
-		<li>Search the website using the form below</li>
 	</ul>
 
 	<?php
