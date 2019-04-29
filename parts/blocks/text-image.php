@@ -12,7 +12,7 @@
 
 <section class="block spacing spacing--bottom-only">
 	<div class="grid">
-		<div class="col col-6">
+		<div class="col col-6 col-sm">
 
 			<?php
 			// Get the image.
@@ -29,7 +29,7 @@
 			endif; ?>
 
 		</div>
-		<div class="col col-6">
+		<div class="col col-6 col-sm">
 
 			<?php
 			the_sub_field( 'content' ); ?>
