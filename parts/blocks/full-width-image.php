@@ -11,20 +11,38 @@
 
 $is_full_bleed = get_sub_field( 'full_bleed' );
 
-if ( $is_full_bleed ) :
-	echo 'Do something';
-endif;
-
-
 // Get the image.
-$image = get_sub_field( 'image' );
+$image = get_sub_field( 'image' ); ?>
 
-if ( $image ) :
+<figure class="block spacing spacing--bottom-only">
 
-	// Get the ID of the image and use it to get the alt text.
-	$image_alt = get_post_meta( $image, '_wp_attachment_image_alt', true ); ?>
+	<?php
+	if ( ! $is_full_bleed ) : ?>
 
-	<img <?php tac_acf_responsive_image( get_sub_field( 'image' ), 'full-width', '1800px' ); ?>  alt="<?php echo esc_html( $image_alt ); ?>" /> 
+		<div class="grid">
+			<div class="col col-12">
 
-<?php
-endif; ?>
+	<?php
+	endif; ?>
+
+		<?php
+		if ( $image ) :
+
+			// Get the ID of the image and use it to get the alt text.
+			$image_alt = get_post_meta( $image, '_wp_attachment_image_alt', true ); ?>
+
+			<img <?php tac_acf_responsive_image( get_sub_field( 'image' ), 'full-width', '1800px' ); ?>  alt="<?php echo esc_html( $image_alt ); ?>" /> 
+
+		<?php
+		endif; ?>
+
+	<?php
+	if ( ! $is_full_bleed ) : ?>
+
+			</div>
+		</div>
+
+	<?php
+	endif; ?>
+
+</figure>
