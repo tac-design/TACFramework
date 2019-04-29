@@ -50,12 +50,14 @@
 				<div class="col">
 			
 					<!-- Start main nav. -->
-					<nav id="main-nav" class="main-nav">
+					<nav id="main-nav" class="main-nav hide-for-small">
 						<?php
 						wp_nav_menu( array(
 							'theme_location' => 'main',
 						) ); ?>
 					</nav><!-- /#main-nav. -->
+
+					<a href="#" class="menu-btn show-for-small">Menu</a>
 
 				</div>
 			</div>
