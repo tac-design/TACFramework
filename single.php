@@ -17,6 +17,8 @@ get_header(); ?>
 
 		get_template_part( 'parts/content', 'post' );
 
+		get_template_part( 'parts/post-feed' );
+
 	endwhile; ?>
 
 </main>
