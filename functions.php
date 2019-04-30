@@ -25,15 +25,29 @@ require_once( 'lib/tac.framework.utilities.php' );
 
 /**
  * Enqueue CSS
- * Main CSS file and fontawesome
+ * Main CSS file
  */
 function tac_css_enqueuer() {
 	wp_register_style( 'tac_main', get_stylesheet_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'tac_main' );
-	wp_register_style( 'tac_fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
-	wp_enqueue_style( 'tac_fontawesome' );
 }
 add_action( 'wp_enqueue_scripts', 'tac_css_enqueuer' );
+
+
+
+
+/**
+ * Enqueue Font Awesome 5
+ * The project's domain needs to be added here in order for FA icons to display: https://fontawesome.com/account/cdn
+ */
+function tac_enqueue_font_awesome_pro() { ?>
+
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-Bx4pytHkyTDy3aJKjGkGoHPt3tvv6zlwwjc3iqN7ktaiEMLDPqLSZYts2OjKcBx1" crossorigin="anonymous">
+
+<?php
+}
+
+add_action( 'wp_head', 'tac_enqueue_font_awesome_pro' );
 
 
 
