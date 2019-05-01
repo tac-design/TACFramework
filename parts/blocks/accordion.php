@@ -15,8 +15,10 @@
 		<div class="col col-8">
 
 			<?php
+			// Get the title field.
 			$has_title = get_sub_field( 'title' );
 
+			// Check if there is a title and display it.
 			if ( $has_title ) : ?>
 
 				

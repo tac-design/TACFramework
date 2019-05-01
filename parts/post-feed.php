@@ -17,11 +17,14 @@
 		</div>
 			
 		<!-- Start archive -->
-		<?php // Get the latest 4 published posts.
+		<?php
 
+		// The ID of the current post.
 		$this_post = $post->ID;
 
+		// Get 4 published posts but exclude the current post.
 		$args = array(
+			'post_type' => 'post',
 			'post_status' => 'publish',
 			'posts_per_page' => 4,
 			'post__not_in' => array( $this_post ),
@@ -35,6 +38,7 @@
 				<div class="col col-3">
 
 					<?php
+					// An individual archive post item.
 					get_template_part( 'parts/archive', 'post' ); ?>
 
 				</div>
@@ -45,4 +49,5 @@
 
 		wp_reset_postdata(); ?>
 
-</div>
+	</div>
+</aside>

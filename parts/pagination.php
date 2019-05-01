@@ -10,11 +10,10 @@
 
 
 // Only show pagination links if there are multiple pages of posts.
-if ( tac_is_paginated() ) : ?>
+if ( tac_is_paginated() ) :
 
-		<?php next_posts_link( '&lt; Previous' ); ?>
-		<?php previous_posts_link( 'Next &gt;' ); ?>
-	</div>
+	// The pagination links.
+	next_posts_link( '&lt; Previous' );
+	previous_posts_link( 'Next &gt;' );
 
-<?php
 endif;

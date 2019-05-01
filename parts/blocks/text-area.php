@@ -18,6 +18,7 @@
 			// Check if there's a title and if there is display it.
 			$has_title = get_sub_field( 'title' );
 
+			// If there's a title, display it, else do nothing.
 			if ( $has_title ) : ?>
 
 				<h2><?php the_sub_field( 'title' ); ?></h2>
@@ -26,6 +27,7 @@
 			endif; ?>
 
 			<?php
+			// The main block content.
 			the_sub_field( 'content' ); ?>
 
 		</div>

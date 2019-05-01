@@ -14,7 +14,7 @@
 
 	jQuery(function($) {
 		
-		// Asynchronously Load the map API. 
+		// Asynchronously Load the map API - NEED TO ADD API KEY HERE. 
 		var script = document.createElement('script');
 		script.src = "http://maps.googleapis.com/maps/api/js?callback=initialize&key=KEY";
 		document.body.appendChild(script);
@@ -27,9 +27,9 @@
 		var mapOptions = {
 		    mapTypeId: 'roadmap',
 		    scrollwheel: false,
-		    center: new google.maps.LatLng(/* Add coordinates to center the map to. */),
+		    center: new google.maps.LatLng(54.9703186,-1.5832597), // EDIT THIS.
 		    zoom: 16,
-		    styles: [/* If using custom styles from SnazzyMaps, etc, add them here. */]
+		    styles: [] // EDIT THIS.
 		};
 
 		// Display a map on the page
@@ -38,11 +38,11 @@
 
 		// Multiple Markers
 		var markers = [
-			['Business Name', 54.9703186,-1.5832597],
+			['Business Name', 54.9703186,-1.5832597], // EDIT THIS.
 		];
 
 		// Info Window Content.
-		var infoWindowContent = [
+		var infoWindowContent = [ // EDIT THIS.
 			['<div class="map-marker">' +
 			'<h3>Business Name</h3>' +
 			'<p>Address</p>' + 

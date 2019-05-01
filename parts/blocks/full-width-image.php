@@ -9,6 +9,7 @@
  */
 
 
+// Check if this image has been marked to display full bleed.
 $is_full_bleed = get_sub_field( 'full_bleed' );
 
 // Get the image.
@@ -17,6 +18,7 @@ $image = get_sub_field( 'image' ); ?>
 <figure class="block spacing spacing--bottom-only">
 
 	<?php
+	// If the image has NOT been set up full bleed, output the grid elements. Else do nothing.
 	if ( ! $is_full_bleed ) : ?>
 
 		<div class="grid">
@@ -26,6 +28,7 @@ $image = get_sub_field( 'image' ); ?>
 	endif; ?>
 
 		<?php
+		// Check that there is an image and if there is display it using the ACF responsive image function defined in tac.framework.setup.php.
 		if ( $image ) :
 
 			// Get the ID of the image and use it to get the alt text.
@@ -37,6 +40,7 @@ $image = get_sub_field( 'image' ); ?>
 		endif; ?>
 
 	<?php
+	// If the image is NOT set to full bleed, close the elements opened above.
 	if ( ! $is_full_bleed ) : ?>
 
 			</div>

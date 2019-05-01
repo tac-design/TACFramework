@@ -18,6 +18,7 @@
 			// Get the image.
 			$image = get_sub_field( 'image' );
 
+			// If there is an image, display it using the ACF responsive image function defined in tac.framework.setup.php.
 			if ( $image ) :
 
 				// Get the ID of the image and use it to get the alt text.
@@ -32,6 +33,7 @@
 		<div class="col col-6 col-sm">
 
 			<?php
+			// The main block content.
 			the_sub_field( 'content' ); ?>
 
 		</div>

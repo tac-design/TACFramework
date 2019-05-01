@@ -15,6 +15,7 @@
 		<h2><?php the_title(); ?></h2>
 
 		<?php
+		// Depending on whether meta is displayed consistently in archives and on single post templates, this template part may need to be extended.
 		get_template_part( 'parts/meta' );
 
 		the_excerpt(); ?>

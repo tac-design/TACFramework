@@ -18,13 +18,15 @@ if ( have_rows( 'card' ) ) : ?>
 			// Loop through the rows of data.
 			while ( have_rows( 'card' ) ) : the_row(); ?>
 
-				<div class="col col-4">
+				<!-- Assumes a card is 1/3 width of viewport and 100% width on small screens. -->
+				<div class="col col-4 col-sm">
 					<div class="card">
 
 						<?php
 						// Get the image.
 						$image = get_sub_field( 'image' );
 
+						// Use the ACF responsive image function (in tac.framework.setup.php) to display responsive images with srcset.
 						if ( $image ) :
 
 							// Get the ID of the image and use it to get the alt text.

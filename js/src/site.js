@@ -1,12 +1,10 @@
 jQuery(document).ready(function($) {
 
 	/* Instantiate the Micromodal module. */
-
 	MicroModal.init();
 	
 
 	/* Simple accordion */
-
 	var allPanels = $('.accordion > dd').hide();
     
 	$('.js-accordion > dt > a').click(function() {
@@ -17,7 +15,6 @@ jQuery(document).ready(function($) {
 
 
 	/* Example of an owl carousel */
-
 	$('.js-carousel').owlCarousel({
 		items: 1,
 		nav: false,
