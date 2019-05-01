@@ -18,7 +18,7 @@
  */
 function tac_create_post_type() {
 
-	register_post_type( 'name',
+	register_post_type( 'custom-post',
 		array(
 			'labels' => array(
 				'name' => __( 'Name' ),
@@ -27,7 +27,7 @@ function tac_create_post_type() {
 			'public' => true,
 			'has_archive' => false,
 			'rewrite' => array(
-				'slug' => 'name',
+				'slug' => 'custom-post',
 			),
 			'supports' => array(
 				'title',
