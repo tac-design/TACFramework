@@ -19,6 +19,8 @@ get_header(); ?>
 		
 		<?php
 		while ( have_posts() ) : the_post();
+
+			// Show search results using the default archive post template part. This likely isn't always the best way, but it's a start.
 			get_template_part( 'parts/archive-post' );
 		endwhile;
 

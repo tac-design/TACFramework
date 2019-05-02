@@ -32,8 +32,9 @@
 			<a class="menu-btn mobile-nav__close"></a>
 
 			<?php
+			// Show the main menu in an initially hidden burger menu.
 			wp_nav_menu( array(
-				'theme_location' => 'mobile',
+				'theme_location' => 'main',
 				'container' => false,
 			) ); ?>
 			

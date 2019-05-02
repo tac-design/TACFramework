@@ -15,6 +15,7 @@ get_header(); ?>
 		<div class="col col-12">
 
 			<?php
+			// Show the page title in an <h1>. This can be further customised per project.
 			the_archive_title( '<h1>', '</h1>' ); ?>
 
 		</div>
@@ -26,6 +27,7 @@ get_header(); ?>
 				<div class="col col-4">
 
 					<?php
+					// Get the template part for individual posts.
 					get_template_part( 'parts/archive-post' ); ?>
 
 				</div>

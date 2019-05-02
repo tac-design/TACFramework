@@ -15,8 +15,10 @@ get_header(); ?>
 	<?php
 	while ( have_posts() ) : the_post();
 
+		// Get the banner.
 		get_template_part( 'parts/banner' );
 
+		// Get the main page content.
 		get_template_part( 'parts/content', 'page' );
 
 	endwhile; ?>
