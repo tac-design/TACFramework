@@ -10,9 +10,8 @@
 
 
 
-/**
- * The grid container.
- */
+/* Grid container
+   ========================================================================== */
 
 .grid {
     box-sizing: border-box;
@@ -39,6 +38,12 @@
     }
 }
 
+
+
+/**
+ * To remove outer and inner gutters, add .grid-nogutter.
+ */
+
 .grid.grid-nogutter {
     margin: 0
 }
@@ -50,9 +55,8 @@
 
 
 
-/**
- * Common styles for each column in the grid.
- */
+/* Columns
+   ========================================================================== */
 
 .col {
     box-sizing: border-box;
@@ -70,7 +74,6 @@
     min-width: 0;
     padding: 0 @gutter 0 @gutter;
 }
-
 
 
 
@@ -96,7 +99,6 @@
 
 
 
-
 /**
  * Classes to control the vertical order of columns in the grid.
  */
@@ -118,7 +120,6 @@
     flex-direction: column;
     display: flex
 }
-
 
 
 
@@ -175,7 +176,6 @@
 
 
 
-
 /**
  * Apply this class to the grid level everse the direction of its columns.
  */
@@ -189,7 +189,6 @@
 
 
 
-
 /**
  * Fix the position of a column.
  */
@@ -197,7 +196,6 @@
 .col-fixed {
     flex: initial
 }
-
 
 
 
@@ -336,7 +334,6 @@
     flex-basis: 100%;
     max-width: 100%
 }
-
 
 
 
