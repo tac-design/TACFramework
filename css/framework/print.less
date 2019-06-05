@@ -1,0 +1,531 @@
+/* ==========================================================================
+   Print
+   ========================================================================== */
+
+/**
+ * Generic print styles.
+ *
+ */
+
+@media print {
+
+
+
+
+	/* Sensible defaults
+	========================================================================== */
+
+
+   	/**
+	 * Remove backgrounds and shadows globally.
+	 */
+
+	*,
+	*:before,
+	*:after,
+	p:first-letter,
+	div:first-letter,
+	blockquote:first-letter,
+	li:first-letter,
+	p:first-line,
+	div:first-line,
+	blockquote:first-line,
+	li:first-line {
+		background: transparent !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+
+
+
+	/**
+	 * Set the page size to A4, portrait, and add some margins.
+	 */
+
+	@page {
+		size: A4;
+		margin: 2.5cm 2cm;
+	}
+
+	html, body {
+		width: 210mm;
+		height: 297mm;
+	}
+
+	body {
+		padding-bottom: 1.5cm;
+	    padding-left: 1cm;
+	    padding-right: 1cm;
+	    padding-top: 1.5cm;
+	}
+
+
+
+
+	/**
+	 * Strip back global styles and optimise text for print.
+	 */
+
+	html {
+		font-size: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		background: @white !important;
+		color: @black !important;
+		line-height: 1.5;
+		margin: 0 auto;
+		text-rendering: optimizeLegibility;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+	}
+
+
+
+	/**
+	 * Create defaults for containers.
+	 * Forcing these styles makes page-break-after work more reliably.
+	 */
+
+	div {
+		float: none !important;
+		position: static !important; 
+		box-sizing: content-box !important;
+	}
+
+
+
+
+	/**
+	 * Headings.
+	 */
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: #000 !important;
+		line-height: 1.2;
+		margin-bottom: 2.5rem !important;
+		margin-top: 0;
+	}
+
+	h1 {
+		font-size: 3.5rem !important;
+	}
+
+	h2 {
+		font-size: 2.5rem !important;
+	}
+
+	h3 {
+		font-size: 2.2rem !important;
+	}
+
+	h4 {
+		font-size: 2rem !important;
+	}
+
+	h5 {
+		font-size: 1.8rem !important;
+	}
+
+	h6 {
+		font-size: 1.6rem !important;
+	}
+
+
+
+
+	/**
+	 * Paragraphs and lists.
+	 */
+
+	p,
+	blockquote,
+	table,
+	ul,
+	ol,
+	dl {
+		margin-bottom: 1.5rem;
+		margin-top: 0;
+		color: #000 !important;
+	}
+
+	p:last-child,
+	ul:last-child,
+	ol:last-child {
+		margin-bottom: 0;
+	}
+
+	dt {
+		font-weight: bold;
+	}
+
+	dd {
+		margin: 0;
+		margin-bottom: 0.75rem;
+	}
+
+
+
+
+	/**
+	 * Links.
+	 */
+
+	a,
+	a:visited {
+		color: @black !important;
+		text-decoration: underline;
+		word-wrap: break-word;
+	}
+
+
+
+
+	/**
+	 * Tables.
+	 */
+
+	table {
+		border-collapse: collapse;
+
+		thead {
+			display: table-header-group;
+		}
+
+		th,
+		td {
+			border-bottom: 1px solid @black;
+			padding: 1rem 1.5rem;
+			page-break-inside: avoid;
+		}
+	}
+
+
+
+
+	/**
+	 * Preformatted text.
+	 */
+
+	code,
+	pre,
+	kbd {
+		border: 1px solid @stroke;
+		font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+		font-size: 85%;
+	}
+
+	code,
+	kbd {
+		padding: 0.5rem;
+	}
+
+	pre {
+		margin-bottom: 1.5rem;
+		padding: 1rem 1.2rem;
+	}
+
+	pre code,
+	pre kbd {
+		border: 0;
+	}
+
+
+
+
+	/**
+	 * Placeholders.
+	 */
+
+	::-webkit-input-placeholder,
+	:-moz-placeholder,
+	:-ms-input-placeholder {
+		color: transparent;
+	}
+
+
+
+
+	/**
+	 * Quotes.
+	 */
+
+	blockquote {
+		border: 0;
+		border-left: 0.5rem solid #bbb;
+		padding: 1.2rem 1.5rem;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	
+		p:last-child,
+		ul:last-child,
+		ol:last-child {
+			margin-bottom: 0;
+		}
+
+		footer {
+			display: block;
+			font-size: 80%;
+		}
+	}
+
+
+
+
+	/**
+	 * Images.
+	 */
+
+	img {
+		border: 0;
+		display: block;
+		max-width: 100% !important;
+		vertical-align: middle;
+	}
+
+
+
+
+	/**
+	 * Horizontal rules.
+	 */
+
+	hr {
+		border: 0;
+		border-bottom: 2px solid @stroke;
+		height: 0;
+		margin: 2.25rem 0;
+		padding: 0;
+	}
+
+	
+
+
+	/**
+	 * Abbreviations.
+	 */
+
+	abbr[title],
+	acronym[title] {
+		border: 0;
+		text-decoration: none;
+	}
+
+
+
+
+	 /* Page breaks.
+	========================================================================== */
+
+
+	/**
+	 * Prevent breaks inside elements.
+	 */
+
+	table,
+	blockquote,
+	pre,
+	code,
+	figure,
+	li,
+	hr,
+	ul,
+	ol,
+	a,
+	tr {
+		page-break-inside: avoid;
+	}
+
+
+
+
+	/**
+	 * Set the minimum number of lines in an element to be shown.
+	 */
+
+	h2,
+	h3,
+	h4,
+	p,
+	a {
+		orphans: 3;
+		widows: 3;
+	}
+
+
+
+
+	/**
+	 * Avoid breaks immediatelty after (and inside of) headings.
+	 */
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6, {
+		page-break-after: avoid;
+		page-break-inside: avoid;
+	}
+
+
+
+
+	/**
+	 * Avoid breaks after the first paragraph after a heading.
+	 */
+
+	h1 + p,
+	h2 + p,
+	h3 + p {
+		page-break-before: avoid;
+	}
+
+
+
+
+	/**
+	 * Avoid breaks inside paragraphs.
+	 */
+
+	p {
+		page-break-inside: avoid;
+	}
+
+
+
+	/**
+	 * Avoid breaks before and inside images.
+	 */
+
+	img {
+		page-break-after: auto;
+		page-break-before: auto;
+		page-break-inside: avoid;
+	}
+
+
+
+
+	/**
+	 * Add word wrapping to preformatted text.
+	 */
+
+	pre {
+		white-space: pre-wrap !important;
+		word-wrap: break-word;
+	}
+
+
+
+
+	/**
+	 * Display the linked URL in brackets after anchor text.
+	 */
+
+	a[href^='http']:after, a[href^='ftp']:after {
+		content: " (" attr(href) ")";
+		font-size: 80%;
+	}
+
+
+
+
+	/**
+	 * Hide image links.
+	 */
+
+	a[href$='.jpg']:after,
+	a[href$='.jpeg']:after,
+	a[href$='.gif']:after,
+	a[href$='.png']:after {
+		display: none;
+	}
+
+
+
+
+	/**
+	 * Show full form of word in brackets after element.
+	 */
+
+	abbr[title]:after,
+	acronym[title]:after {
+		content: " (" attr(title) ")";
+	}
+
+
+
+
+	/**
+	 * Helper classes to prevent the reformatting behaviour defined above.
+	 */
+
+	a.no-reformat:after {
+		content: '';
+	}
+
+	abbr[title].no-reformat:after,
+	acronym[title].no-reformat:after {
+		content: '';
+	}
+
+	.no-reformat abbr:after,
+	.no-reformat acronym:after,
+	.no-reformat a:after {
+		content: '';
+	}
+
+
+
+
+	/**
+	 * Page break helper classes.
+	 */
+
+	.page-break,
+	.page-break-before {
+		page-break-before: always;
+	}
+
+	.page-break-after {
+		page-break-after: always;
+	}
+
+	.no-break {
+        page-break-inside: avoid !important;
+    }
+
+
+
+
+    /**
+	 * A helper class to prevent elements being printed.
+	 */
+
+	.no-print {
+		display: none !important;
+	}
+
+
+
+
+	 /* Project specific print styles.
+	========================================================================== */
+
+	/**
+	 * Add additional project styles here.
+	 */
+
+}
