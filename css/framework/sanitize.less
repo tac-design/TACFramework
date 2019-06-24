@@ -529,8 +529,7 @@ img {
     clear: both;
     display: block;
     max-width: 100%; }
-  img {
-    margin-right: 16px; } }
+}
 
 embed,
 iframe,
@@ -568,7 +567,7 @@ h2 {
 
 h3 {
   font-size: 2.8rem;
-  margin: 0 0 2.5; }
+  margin: 0 0 2.5rem; }
 
 h4 {
   font-size: 2.8rem;
@@ -624,7 +623,7 @@ dd {
 
 ul,
 ol {
-  margin-bottom: 2.5rem;
+  margin: 0 0 2.5rem;
   padding-left: 4rem;
   vertical-align: baseline; }
 
@@ -829,7 +828,8 @@ input[type=radio] {
 input[type=submit],
 input[type=reset],
 input[type=button],
-button {
+button,
+.button {
   background-color: @primary;
   border: @primary;
   border-radius: 4px;
@@ -862,26 +862,33 @@ button::-moz-focus-inner {
 input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover,
-button:hover {
+button:hover,
+.button:hover {
   background-color: darken(@primary, 15%);
   border-color: darken(@primary, 15%);
-  color: #fff; }
+  color: @white !important;
+  text-decoration: none; }
 
 input[type=submit]:not(:disabled):active,
 input[type=reset]:not(:disabled):active,
 input[type=button]:not(:disabled):active,
-button:not(:disabled):active {
+button:not(:disabled):active,
+.button:not(:disabled):active {
   background-color: darken(@primary, 15%);
   border-color: darken(@primary, 15%);
-  color: #fff; }
+  color: @white;
+  text-decoration: none; }
 
 input[type=submit]:focus,
 input[type=reset]:focus,
 input[type=button]:focus,
-button:focus {
+button:focus,
+.button:focus {
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.2rem lighten(@primary, 15%);
-          box-shadow: 0 0 0 0.2rem lighten(@primary, 15%); }
+          box-shadow: 0 0 0 0.2rem lighten(@primary, 15%);
+  color: @white;
+  text-decoration: none; }
 
 input[type=submit]:disabled,
 input[type=reset]:disabled,
