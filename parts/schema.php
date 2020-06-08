@@ -1,15 +1,3 @@
-<?php
-/**
- * Schema
- *
- * Schema data for the organisation.
- *
- * @package TAC Framework
- * @since TAC Framework 2.0
- */
-
-?>
-
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org/",

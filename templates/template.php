@@ -1,27 +1,20 @@
 <?php
 /**
  * Template Name: Template
- *
- * A basic file for a page template.
- *
- * @package TAC Framework
- * @since TAC Framework 2.0
  */
 
-get_header(); ?>
+get_header();
+?>
 
-<article id="page" class="content">
+<article id="page-content" class="content">
 
 	<?php
 	while ( have_posts() ) : the_post();
-
-		// Get the banner.
 		get_template_part( 'parts/banner' );
-
-		// Get the main page content.
-		get_template_part( 'parts/content', 'page' );
-
-	endwhile; ?>
+		the_content();
+		get_template_part( 'parts/flexible-content' );
+	endwhile;
+	?>
 
 </article>
 

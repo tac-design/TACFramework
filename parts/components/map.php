@@ -1,15 +1,3 @@
-<?php
-/**
- * Map
- *
- * Shows a map of the business location.
- *
- * @package TAC Framework
- * @since TAC Framework 2.0
- */
-
-?>
-
 <script type="text/javascript">
 
 	jQuery(function($) {
@@ -79,5 +67,4 @@
 
 </script>
 
-<!-- Map container - utilises flexible mixin.  -->
 <div id="map" class="flexible-container"></div>

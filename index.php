@@ -1,40 +1,34 @@
 <?php
-/**
- * Index
- *
- * The template for the blog index.
- *
- * @package TAC Framework
- * @since TAC Framework 2.0
- */
+get_header();
+?>
 
-get_header(); ?>
-
-<section id="archive" class="archive spacing spacing--bottom-only">
+<div id="archive" class="archive">
 	<div class="grid">
-		<div class="col col-12">
+		<div class="col">
 
 			<?php
-			// Show the page title in an <h1>. This can be further customised per project.
-			the_archive_title( '<h1>', '</h1>' ); ?>
+			the_archive_title( '<h1>', '</h1>' );
+			?>
 
 		</div>
 
 		<?php
 		if ( have_posts() ) :
-			while ( have_posts() ) : the_post(); ?>
+			while ( have_posts() ) : the_post();
+				?>
 
-				<div class="col col-4">
+				<div class="col">
 
 					<?php
-					// Get the template part for individual posts.
-					get_template_part( 'parts/archive-post' ); ?>
+					get_template_part( 'parts/loop/post-card' );
+					?>
 
 				</div>
 
 			<?php
 			endwhile;
-		else : ?>
+		else :
+			?>
 
 			<div class="grid">
 				<div class="col">
@@ -43,11 +37,11 @@ get_header(); ?>
 			</div>
 
 		<?php
-		endif; ?>
+		endif;
+		?>
 
 	</div>
-
-</main>
+</div>
 
 <?php
 get_footer();
