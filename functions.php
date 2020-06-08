@@ -36,30 +36,12 @@ add_action( 'wp_enqueue_scripts', 'tac_css_enqueuer' );
 
 
 
-/**
- * Enqueue Font Awesome 5
- * The project's domain needs to be added here in order for FA icons to display: https://fontawesome.com/account/cdn
- */
-function tac_enqueue_font_awesome_pro() { ?>
-
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-Bx4pytHkyTDy3aJKjGkGoHPt3tvv6zlwwjc3iqN7ktaiEMLDPqLSZYts2OjKcBx1" crossorigin="anonymous">
-
-<?php
-}
-
-add_action( 'wp_head', 'tac_enqueue_font_awesome_pro' );
-
-
-
 
 /**
  * Enqueue JS
  */
 function tac_script_enqueuer() {
 	if ( ! is_admin() ) {
-		// Modernizr.
-		wp_register_script( 'tac_modernizr', get_stylesheet_directory_uri() . '/js/vendor/modernizr.js', array( 'jquery' ) );
-		wp_enqueue_script( 'tac_modernizr' );
 		// Site.
 		wp_register_script( 'tac_main', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery' ), null, true );
 		wp_enqueue_script( 'tac_main' );
