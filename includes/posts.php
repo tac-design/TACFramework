@@ -1,14 +1,4 @@
 <?php
-/**
- * Posts
- *
- * A file in which post types, taxonomies and meta fields are defined.
- *
- * @package TAC Framework
- * @since TAC Framework 2.0
- */
-
-
 
 
 /**
