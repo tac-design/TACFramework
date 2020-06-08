@@ -15,9 +15,6 @@
 		<div class="col">
 			<h1>Banner Title</h1>
 			<p>Banner paragraph</p>
-
-			<!-- A simple demo modal. The modal container is called just before </body>. -->
-			<button data-micromodal-trigger="modal-1" role="button">Open the modal</button>
 		</div>
 	</div>
 </header>

@@ -2,22 +2,37 @@
    Variables
    ========================================================================== */
 
+
 /**
- * LESS variables and mixins for the project are kept in here.
- *
+ * 1. Breakpoints
+ * 2. Colours
+ * 3. Units
  */
 
 
 
 
-/* Colours */
+
+/* 1. Breakpoints
+   ========================================================================== */
+
+@small: 480px;
+@medium: 768px;
+@large: 1320px;
+
+
+
+
+
+/* 2. Colours
+   ========================================================================== */
 
 @primary: #DB504A;
 @secondary: #254441;
 
 @body: #666666;
-@black: #000000;
-@white: #FFFFFF;
+@dark: #000000;
+@light: #FFFFFF;
 
 @light-grey: #FAFAFA;
 @mid-grey: #BDBDBD;
@@ -26,168 +41,11 @@
 
 
 
-/* Breakpoints */
 
-@small: 48rem;
-@medium: 76.8rem;
-@large: 132rem;
-
-
-
-
-/* Backgrounds */
-
-.background-primary {
-	background-color: @primary;
-	color: @white;
-}
-
-.background-secondary {
-	background-color: @secondary;
-	color: @white;
-}
-
-
-
-
-/* Layout */
+/* 3. Units
+   ========================================================================== */
 
 @gutter: 1.5rem; /* The gutter for grid columns. */
 @site-padding: 4rem; /* Use this variable to define the side padding for the site. */
 
 @unit: 8rem; /* Variable used to apply consistent spacing to blocks. */
-@unit-small: @unit/2;
-
-
-.spacing {
-	padding: @unit 0;
-
-	@media only screen and (max-width: @small) {
-		padding: @unit-small 0;
-	}
-
-	&.spacing--small {
-		padding: @unit/2 0;
-	}
-
-	&.spacing--large {
-		padding: @unit*1.5 0;
-
-		@media only screen and (max-width: @small) {
-			padding: @unit-small*1.5 0;
-		}
-	}
-
-	&.spacing--top-only {
-		padding-bottom: 0 !important;
-	}
-
-	&.spacing--bottom-only {
-		padding-top: 0 !important;
-	}
-}
-
-
-.margin {
-	margin: @unit 0;
-
-	@media only screen and (max-width: @small) {
-		margin: @unit-small 0;
-	}
-
-	&.margin--small {
-		margin: @unit/2 0;
-	}
-
-	&.margin--large {
-		margin: @unit*1.5 0;
-
-		@media only screen and (max-width: @small) {
-			margin: @unit-small*1.5 0;
-		}
-	}
-
-	&.margin--top-only {
-		margin-bottom: 0 !important;
-	}
-
-	&.margin--bottom-only {
-		margin-top: 0 !important;
-	}
-}
-
-
-
-
-/* Transitions */
-
-.transition {
-	transition: all 0.4s ease-in;
-}
-
-
-
-
-/* Responsive iframes, objects and embeds */
-
-.flexible-container {
-	position: relative;
-	padding-bottom: 56.25%;
-	height: 0;
-	overflow: hidden;
-}
-
-.flexible-container iframe,
-.flexible-container object,
-.flexible-container embed {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-
-
-
-/* Micro ClearFix Mixin */
-
-.clearfix {
-	zoom: 1;
-	
-	&:before,
-	&:after {
-		content: "";
-		display: table;
-	}
-	
-	&:after {
-		clear: both;
-	}
-}
-
-
-
-
-/* Alignment */
-
-.float-left {
-    float: left;
-}
-
-.float-right {
-    float: right;
-}
-
-
-.align-left {
-    text-align: left;
-}
-
-.align-center {
-    text-align: center;
-}
-
-.align-right {
-    text-align: right;
-}

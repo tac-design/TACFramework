@@ -86,24 +86,6 @@ add_action( 'wp_head' , 'tac_add_favicon' );
 
 
 
-/**
- * Create a widget area
- */
-function tac_widgets_init() {
-	register_sidebar( array(
-		'name' => __( 'Widget Area' ),
-		'id' => 'widget-area',
-		'description' => __( 'The widget area' ),
-		'before_widget' => '<div class="widget">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>',
-	) );
-}
-add_action( 'widgets_init', 'tac_widgets_init' );
-
-
-
 
 /**
  * Register menus

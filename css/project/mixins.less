@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+
+/**
+ * 1. Spacing
+ * 2. Backgrounds
+ * 3. Text colour
+ * 4. Transitions
+ * 5. Flexible containers
+ * 6. Clearfix
+ * 7. Alignment
+ */
+
+
+
+
+
+/* 1. Spacing
+   ========================================================================== */
+
+.padding-top {
+	padding-top: @unit;
+}
+
+.padding-bottom {
+	padding-bottom: @unit;
+}
+
+.padding-both {
+	padding: @unit 0;
+}
+
+
+
+
+
+/* 2. Backgrounds
+   ========================================================================== */
+
+.background-primary {
+	background-color: @primary;
+}
+
+.background-secondary {
+	background-color: @secondary;
+}
+
+.background-white {
+	background-color: @light;
+}
+
+
+
+
+
+/* 3. Text colour
+   ========================================================================== */
+
+.colour-white {
+	color: @light;
+}
+
+.colour-body {
+	color: @body;
+}
+
+.colour-dark {
+	color: @dark;
+}
+
+.colour-primary {
+	color: @primary;
+}
+
+.colour-secondary {
+	color: @secondary;
+}
+
+
+
+
+
+/* 3. Transitions
+   ========================================================================== */
+
+.transition {
+	transition: all 0.2s ease-in;
+}
+
+
+
+
+
+/* 4. Flexible containers
+   ========================================================================== */
+
+.flexible-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+
+	iframe,
+	object,
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+
+
+
+
+/* 5. Clearfix
+   ========================================================================== */
+
+.clearfix {
+	zoom: 1;
+	
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	
+	&:after {
+		clear: both;
+	}
+}
+
+
+
+
+
+/* 6. Alignment
+   ========================================================================== */
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}

@@ -2,14 +2,8 @@
    Print
    ========================================================================== */
 
-/**
- * Generic print styles.
- *
- */
 
 @media print {
-
-
 
 
 	/* Sensible defaults
@@ -37,8 +31,6 @@
 	}
 
 
-
-
 	/**
 	 * Set the page size to A4, portrait, and add some margins.
 	 */
@@ -59,8 +51,6 @@
 	    padding-right: 1cm;
 	    padding-top: 1.5cm;
 	}
-
-
 
 
 	/**
@@ -84,7 +74,6 @@
 	}
 
 
-
 	/**
 	 * Create defaults for containers.
 	 * Forcing these styles makes page-break-after work more reliably.
@@ -95,8 +84,6 @@
 		position: static !important; 
 		box-sizing: content-box !important;
 	}
-
-
 
 
 	/**
@@ -140,8 +127,6 @@
 	}
 
 
-
-
 	/**
 	 * Paragraphs and lists.
 	 */
@@ -173,8 +158,6 @@
 	}
 
 
-
-
 	/**
 	 * Links.
 	 */
@@ -185,8 +168,6 @@
 		text-decoration: underline;
 		word-wrap: break-word;
 	}
-
-
 
 
 	/**
@@ -207,8 +188,6 @@
 			page-break-inside: avoid;
 		}
 	}
-
-
 
 
 	/**
@@ -239,8 +218,6 @@
 	}
 
 
-
-
 	/**
 	 * Placeholders.
 	 */
@@ -250,8 +227,6 @@
 	:-ms-input-placeholder {
 		color: transparent;
 	}
-
-
 
 
 	/**
@@ -280,8 +255,6 @@
 	}
 
 
-
-
 	/**
 	 * Images.
 	 */
@@ -292,8 +265,6 @@
 		max-width: 100% !important;
 		vertical-align: middle;
 	}
-
-
 
 
 	/**
@@ -308,8 +279,6 @@
 		padding: 0;
 	}
 
-	
-
 
 	/**
 	 * Abbreviations.
@@ -320,6 +289,7 @@
 		border: 0;
 		text-decoration: none;
 	}
+
 
 
 
@@ -347,8 +317,6 @@
 	}
 
 
-
-
 	/**
 	 * Set the minimum number of lines in an element to be shown.
 	 */
@@ -361,8 +329,6 @@
 		orphans: 3;
 		widows: 3;
 	}
-
-
 
 
 	/**
@@ -380,8 +346,6 @@
 	}
 
 
-
-
 	/**
 	 * Avoid breaks after the first paragraph after a heading.
 	 */
@@ -393,8 +357,6 @@
 	}
 
 
-
-
 	/**
 	 * Avoid breaks inside paragraphs.
 	 */
@@ -402,7 +364,6 @@
 	p {
 		page-break-inside: avoid;
 	}
-
 
 
 	/**
@@ -416,8 +377,6 @@
 	}
 
 
-
-
 	/**
 	 * Add word wrapping to preformatted text.
 	 */
@@ -428,8 +387,6 @@
 	}
 
 
-
-
 	/**
 	 * Display the linked URL in brackets after anchor text.
 	 */
@@ -438,8 +395,6 @@
 		content: " (" attr(href) ")";
 		font-size: 80%;
 	}
-
-
 
 
 	/**
@@ -454,8 +409,6 @@
 	}
 
 
-
-
 	/**
 	 * Show full form of word in brackets after element.
 	 */
@@ -464,8 +417,6 @@
 	acronym[title]:after {
 		content: " (" attr(title) ")";
 	}
-
-
 
 
 	/**
@@ -488,8 +439,6 @@
 	}
 
 
-
-
 	/**
 	 * Page break helper classes.
 	 */
@@ -508,8 +457,6 @@
     }
 
 
-
-
     /**
 	 * A helper class to prevent elements being printed.
 	 */
@@ -517,15 +464,5 @@
 	.no-print {
 		display: none !important;
 	}
-
-
-
-
-	 /* Project specific print styles.
-	========================================================================== */
-
-	/**
-	 * Add additional project styles here.
-	 */
 
 }
