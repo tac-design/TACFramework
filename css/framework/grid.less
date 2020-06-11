@@ -9,25 +9,13 @@
 
 .grid {
     box-sizing: border-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: -webkit-box;
     display: flex;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    -webkit-box-flex: 0;
     flex: 0 1 auto;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 0 @site-padding;
 
-    @media only screen and (max-width: @small) {
+    @media @small-down {
         padding: 0;
     }
 }
@@ -332,7 +320,7 @@
  * on medium and small screens.
  */
 
-@media only screen and (max-width: @large) {
+@media @large-down {
 
     .col-25-lg {
         flex: 25%;
@@ -355,7 +343,7 @@
     }
 }
 
-@media only screen and (max-width: @medium) {
+@media @medium-down {
 
 	.col-25-md {
         flex: 25%;
@@ -378,7 +366,7 @@
     }
 }
 
-@media only screen and (max-width: @small) {
+@media @small-down {
 
 	.col-25-sm {
         flex: 25%;
