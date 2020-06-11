@@ -34,6 +34,8 @@
 
 
 
+
+
 /**
  * To remove outer and inner gutters, add .grid-nogutter.
  */
@@ -45,6 +47,7 @@
 .grid.grid-nogutter>.col {
     padding: 0
 }
+
 
 
 
@@ -71,6 +74,8 @@
 
 
 
+
+
 /**
  * Classes to control the vertical alignment of columns in the grid.
  */
@@ -90,6 +95,8 @@
     -ms-flex-item-align: center;
     align-self: center
 }
+
+
 
 
 
@@ -114,6 +121,8 @@
     flex-direction: column;
     display: flex
 }
+
+
 
 
 
@@ -152,6 +161,7 @@
 
 
 
+
 /**
  * Manually assign first and last positions to specific columns.
  */
@@ -170,6 +180,8 @@
 
 
 
+
+
 /**
  * Apply this class to the grid level everse the direction of its columns.
  */
@@ -183,6 +195,8 @@
 
 
 
+
+
 /**
  * Fix the position of a column.
  */
@@ -190,6 +204,8 @@
 .col-fixed {
     flex: initial
 }
+
+
 
 
 
@@ -240,94 +256,73 @@
 
 
 
+
 /**
  * If it's necessary to assign specific column widths, here are some classes
  * to do that.
  */
 
 .col-1 {
-    -ms-flex-preferred-size: 8.33333%;
-    -webkit-flex-basis: 8.33333%;
     flex-basis: 8.33333%;
     max-width: 8.33333%
 }
 
 .col-2 {
-    -ms-flex-preferred-size: 16.66667%;
-    -webkit-flex-basis: 16.66667%;
     flex-basis: 16.66667%;
     max-width: 16.66667%
 }
 
 .col-3 {
-    -ms-flex-preferred-size: 25%;
-    -webkit-flex-basis: 25%;
     flex-basis: 25%;
     max-width: 25%
 }
 
 .col-4 {
-    -ms-flex-preferred-size: 33.33333%;
-    -webkit-flex-basis: 33.33333%;
     flex-basis: 33.33333%;
     max-width: 33.33333%
 }
 
 .col-5 {
-    -ms-flex-preferred-size: 41.66667%;
-    -webkit-flex-basis: 41.66667%;
     flex-basis: 41.66667%;
     max-width: 41.66667%
 }
 
 .col-6 {
-    -ms-flex-preferred-size: 50%;
-    -webkit-flex-basis: 50%;
     flex-basis: 50%;
     max-width: 50%
 }
 
 .col-7 {
-    -ms-flex-preferred-size: 58.33333%;
-    -webkit-flex-basis: 58.33333%;
     flex-basis: 58.33333%;
     max-width: 58.33333%
 }
 
 .col-8 {
-    -ms-flex-preferred-size: 66.66667%;
-    -webkit-flex-basis: 66.66667%;
     flex-basis: 66.66667%;
     max-width: 66.66667%
 }
 
 .col-9 {
-    -ms-flex-preferred-size: 75%;
-    -webkit-flex-basis: 75%;
     flex-basis: 75%;
     max-width: 75%
 }
 
 .col-10 {
-    -ms-flex-preferred-size: 83.33333%;
-    -webkit-flex-basis: 83.33333%;
     flex-basis: 83.33333%;
     max-width: 83.33333%
 }
 
 .col-11 {
-    -ms-flex-preferred-size: 91.66667%;
-    -webkit-flex-basis: 91.66667%;
     flex-basis: 91.66667%;
     max-width: 91.66667%
 }
 
 .col-12 {
-    -ms-flex-preferred-size: 100%;
-    -webkit-flex-basis: 100%;
     flex-basis: 100%;
     max-width: 100%
 }
+
+
 
 
 
@@ -337,22 +332,70 @@
  * on medium and small screens.
  */
 
-@media only screen and (max-width: @small) {
-    .col-sm {
+@media only screen and (max-width: @large) {
+
+    .col-25-lg {
+        flex: 25%;
+        max-width: 25%
+    }
+
+    .col-50-lg {
+        flex: 50%;
+        max-width: 50%
+    }
+
+    .col-75-lg {
+        flex: 75%;
+        max-width: 75%
+    }
+    
+    .col-lg {
         flex: 100%;
         max-width: 100%
     }
 }
 
 @media only screen and (max-width: @medium) {
+
+	.col-25-md {
+        flex: 25%;
+        max-width: 25%
+    }
+
+    .col-50-md {
+        flex: 50%;
+        max-width: 50%
+    }
+
+    .col-75-md {
+        flex: 75%;
+        max-width: 75%
+    }
+   
     .col-md {
         flex: 100%;
         max-width: 100%
     }
 }
 
-@media only screen and (max-width: @large) {
-    .col-lg {
+@media only screen and (max-width: @small) {
+
+	.col-25-sm {
+        flex: 25%;
+        max-width: 25%
+    }
+
+    .col-50-sm {
+        flex: 50%;
+        max-width: 50%
+    }
+
+    .col-75-sm {
+        flex: 75%;
+        max-width: 75%
+    }
+    
+    .col-sm {
         flex: 100%;
         max-width: 100%
     }
