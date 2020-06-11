@@ -22,7 +22,7 @@
 	-webkit-overflow-scrolling: touch;
 	/* enables momentum scrolling in iOS overflow elements */
 
-	@media only screen and (max-width: @small) {
+	@media @small-down {
 		width: 32rem;
 		max-width: 100%;
 	}
@@ -70,7 +70,7 @@
 .pushy-left {
 	transform: translate3d(-48rem, 0, 0);
 
-	@media only screen and (max-width: @small) {
+	@media @small-down {
 		transform: translate3d(-32rem, 0, 0);
 	}
 }
@@ -78,7 +78,7 @@
 .pushy-open-left .push {
 	transform: translate3d(48rem, 0, 0);
 
-	@media only screen and (max-width: @small) {
+	@media @small-down {
 		transform: translate3d(32rem, 0, 0);
 	}
 }
@@ -86,7 +86,7 @@
 .pushy-right {
 	transform: translate3d(48rem, 0, 0);
 
-	@media only screen and (max-width: @small) {
+	@media @small-down {
 		transform: translate3d(32rem, 0, 0);
 	}
 }
@@ -94,7 +94,7 @@
 .pushy-open-right .push {
 	transform: translate3d(-48rem, 0, 0);
 
-	@media only screen and (max-width: @small) {
+	@media @small-down {
 		transform: translate3d(-32rem, 0, 0);
 	}
 }
