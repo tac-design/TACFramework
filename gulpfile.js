@@ -53,6 +53,8 @@ gulp.task('js', function() {
 // Watcher
 gulp.task('default', function() {
     gulp.watch('./css/project/*.less', ['less']);
+    gulp.watch('./css/framework/*.less', ['less']);
+    gulp.watch('./css/vendor/*.less', ['less']);
     gulp.watch('./css/*.less', ['less']);
     gulp.watch('./js/src/*.js', ['js']);
 });
