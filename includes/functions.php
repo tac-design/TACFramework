@@ -44,19 +44,6 @@ add_action( 'wp_enqueue_scripts', 'tac_script_enqueuer' );
 
 
 /**
- * Include schema markup
- */
-function tac_add_schema() {
-	get_template_part( 'parts/schema' );
-}
-
-add_action( 'wp_footer' , 'tac_add_schema' );
-
-
-
-
-
-/**
  * Include favicons and touch icons
  */
 function tac_add_favicon() {

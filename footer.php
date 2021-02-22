@@ -5,7 +5,6 @@
 		</footer>
 
 		<?php
-		get_template_part( 'parts/schema' );
 		wp_footer();
 		?>
 
