@@ -24,7 +24,7 @@
 				<div class="col">
 
 					<?php
-					get_template_part( 'parts/loop/post-card' );
+					get_template_part( 'parts/loop/card-post' );
 					?>
 
 				</div>

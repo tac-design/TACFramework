@@ -2,7 +2,7 @@
 
 
 /**
- * Customise queries
+ * Example customised query.
  */
 function tac_customise_query( $query ) {
 	if ( is_admin() || ! $query->is_main_query() ) {
