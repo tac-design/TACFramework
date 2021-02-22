@@ -27,7 +27,7 @@ gulp.task('less', function() {
         .pipe(plumber({ errorHandle: onError }))
         .pipe(less())
         .on('error', onError)
-        .pipe(autoprefixer('last 2 version', "> 1%", "ie 8"))
+        .pipe(autoprefixer('last 1 version', "> 1%", "ie 10"))
         .pipe(minify())
         .pipe(gulp.dest('./'))
         .pipe(livereload())
