@@ -1,7 +1,9 @@
 		</main>
 
 		<footer id="site-foot" class="site-foot">
-			<p>&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?></p>
+			<div role="contentinfo">
+				<p>&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?></p>
+			</div>
 		</footer>
 
 		<?php
@@ -10,3 +12,4 @@
 
 	</body>
 </html>
+
