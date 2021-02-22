@@ -95,29 +95,6 @@ add_image_size( 'card', 400, 300, true );
 
 
 /**
- * ACF responsive images
- */
-function tac_acf_responsive_image( $image_id, $image_size, $max_width ) {
-
-	// Check the image ID is not blank.
-	if ( '' !== $image_id ) {
-
-		// Set the default src image size.
-		$image_src = wp_get_attachment_image_url( $image_id, $image_size );
-
-		// Set the srcset with various image sizes.
-		$image_srcset = wp_get_attachment_image_srcset( $image_id, $image_size );
-
-		// Generate the markup for the responsive image.
-		echo 'src="' . $image_src . '" srcset="' . $image_srcset . '" sizes="(max-width: ' . $max_width . ') 100vw, ' . $max_width . '"';
-	}
-}
-
-
-
-
-
-/**
  * Check if more than one page of posts exist
  */
 function tac_is_paginated() {

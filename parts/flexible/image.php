@@ -1,6 +1,7 @@
 <?php
 $is_full_bleed = get_sub_field( 'full_bleed' );
 $image = get_sub_field( 'image' );
+$size = 'thumbnail';
 ?>
 
 <figure>
@@ -14,14 +15,9 @@ $image = get_sub_field( 'image' );
 
 	<?php
 	endif;
-
-	if ( $image ) :
-		$image_alt = get_post_meta( $image, '_wp_attachment_image_alt', true ); 
-		?>
-
-		<img <?php tac_acf_responsive_image( get_sub_field( 'image' ), 'full-width', '1800px' ); ?>  alt="<?php echo esc_html( $image_alt ); ?>" /> 
-
-	<?php
+							
+	if( $image ) :
+		echo wp_get_attachment_image( $image, $size );
 	endif;
 
 	if ( ! $is_full_bleed ) : ?>
