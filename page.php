@@ -1,17 +1,19 @@
 <?php
 get_header();
-?>
 
-<article id="page-content" class="content">
-
-	<?php
-	while ( have_posts() ) : the_post();
-		get_template_part( 'parts/banner' );
-		the_content();
-	endwhile;
+while ( have_posts() ) : the_post();
+	get_template_part( 'parts/banner' );
 	?>
 
-</article>
+	<div id="page-content" class="content">
 
-<?php
+		<?php
+		the_content();
+		?>
+
+	</div>
+
+	<?php
+endwhile;
+
 get_footer();

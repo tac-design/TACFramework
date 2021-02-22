@@ -4,19 +4,22 @@
  */
 
 get_header();
-?>
 
-<article id="page-content" class="content">
-
-	<?php
-	while ( have_posts() ) : the_post();
-		get_template_part( 'parts/banner' );
-		the_content();
-		get_template_part( 'parts/flexible-content' );
-	endwhile;
+while ( have_posts() ) : the_post();
+	get_template_part( 'parts/banner' );
 	?>
 
-</article>
+	<div id="page-content" class="content">
 
-<?php
+		<?php
+		the_content();
+		get_template_part( 'parts/blocks' );
+		?>
+
+	</div>
+
+	<?php
+endwhile;
+
 get_footer();
+

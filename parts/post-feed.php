@@ -13,29 +13,9 @@
 	$query = new WP_Query( $args );
 
 	if ( $query->have_posts() ) :
-		?>
-
-		<div class="grid">
-
-			<?php
-			while ( $query->have_posts() ) : $query->the_post();
-				?>
-
-				<div class="col">
-
-					<?php
-					get_template_part( 'parts/loop/card-post' );
-					?>
-
-				</div>
-
-			<?php
-			endwhile;
-			?>
-
-		</div>
-
-	<?php
+		while ( $query->have_posts() ) : $query->the_post();
+				get_template_part( 'parts/loop/card-post' );
+		endwhile;
 	endif;
 
 	wp_reset_postdata();
