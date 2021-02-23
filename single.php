@@ -13,7 +13,7 @@ while ( have_posts() ) : the_post();
 	</article>
 
 	<?php
-	get_template_part( 'parts/loop/post-feed' );
+	get_template_part( 'parts/components/post-feed' );
 endwhile;
 
 get_footer();
