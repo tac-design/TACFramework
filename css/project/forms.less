@@ -100,48 +100,63 @@ label {
 
 
 /**
- * Body styles.
+ * Custom layout classes.
  */
 
-.gform_body {
+.gform_fields {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -@gutter;
 
-	ul {
-		list-style: none;
-		margin: 0;
+	& > * {
+		flex: 0 0 100%;
+		padding: 0 @gutter;
+		margin-bottom: 2.5rem;
 
-		li {
-			margin-bottom: 2.5rem;
-			padding-left: 0;
+		&:before {
+			content: none !important;
+		}
 
-			ul li {
-				margin-bottom: 0;
+		&.field-half {
+			flex: 0 0 50%;
+
+			@media @small-down {
+				flex: 0 0 100%;
+			}
+		}
+
+		&.field-third {
+			flex: 0 0 33.3333%;
+
+			@media @small-down {
+				flex: 0 0 100%;
 			}
 		}
 	}
 }
 
-/**
- * Since some elements in complex fields are floated, make sure they're cleared.
- */
-
-.ginput_complex {
-	.clearfix();
-}
 
 /**
- * Display radio button and checkboxes inline.
+ * Modifies for radio button and checkboxes layout.
  */
 
 .gfield_radio,
 .gfield_checkbox {
-	.clearfix();
+	display: flex;
+	padding-left: 0 !important;
+	margin: 0;
 
 	li {
 		display: inline-block;
-		float: left;
 		margin-right: 2rem;
+
+		label {
+			display: inline-block;
+			font-weight: 300;
+		}
 	}
 }
+
 
 /**
  * Style the input counter used on fields with character limit counts.
@@ -151,12 +166,49 @@ label {
 	font-size: 1.4rem;
 }
 
+
 /**
- * Address fields have sub-labels for each sub-field.
- * Style these slightly differently.
+ * Modifiers for name fields.
+ */
+
+.ginput_container_name {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -@gutter;
+
+	& > * {
+		flex: 0 0 50%;
+		padding: 0 @gutter;
+
+		@media @small-down {
+			flex: 0 0 100%;
+		}
+	}
+}
+
+
+/**
+ * Modifiers for address fields, which have labels for each sub-field.
  */
 
 .ginput_container_address {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -@gutter;
+
+	& > * {
+		flex: 0 0 100%;
+		padding: 0 @gutter;
+	}
+
+	.address_state,
+	.address_zip {
+		flex: 0 0 50%;
+
+		@media @small-down {
+			flex: 0 0 100%;
+		}
+	}
 
 	label {
 		font-size: 1.2rem;
@@ -164,47 +216,30 @@ label {
 		font-weight: 300;
 		margin: 0.5rem 0 1.5rem;
 	}
-
-	.address_line_1,
-	.address_city,
-	.address_state,
-	.address_zip {
-		float: left;
-
-		@media @medium-down {
-			float: none;
-		}
-	}
-
-	.address_city,
-	.address_zip {
-		margin-left: 1.5rem;
-
-		@media @medium-down {
-			margin-left: 0;
-		}
-	}
 }
 
+
 /**
- * Message styles for Gravity Forms plugin.
  * Messages, errors, instructions, notifications, etc.
  */
 
 .validation_error,
 .validation_message {
-	font-size: 1.4rem;
-	line-height: 2rem;
-	color: red;
+	font-size: 1.6rem;
+	color: red !important;
 }
 
 .validation_error {
 	margin-bottom: 2.5rem;
 }
 
+.gfield_description {
+	font-size: 1.3rem;
+	display: block;
+}
+
 .gform_confirmation_message {
 	font-size: 1.6rem;
-	line-height: 2.6rem;
 }
 
 .gform_validation_container {
@@ -213,4 +248,13 @@ label {
 
 .gform_drop_instructions {
 	display: none;
+}
+
+
+/**
+ * Form footer.
+ */
+
+.gform_footer {
+	padding-top: 2.5rem;
 }
