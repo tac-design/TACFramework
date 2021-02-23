@@ -2,7 +2,8 @@
 
 
 /**
- * Example function to create a custom post type
+ * Create custom posts
+ * 
  * Creates a post type 'name'
  * All dashicons listed at https://developer.wordpress.org/resource/dashicons
  */
@@ -35,11 +36,12 @@ add_action( 'init', 'tac_create_post_type' );
 
 
 /**
- * Create a custom taxonomy
- * Creates a taxonomy called 'custom' and attaches it to 'post'
+ * Create custom taxonomies.
+ * 
+ * Creates a taxonomy called 'custom' and attaches it to 'post'.
  */
 function tac_create_taxonomy() {
-	// create a new taxonomy
+
 	register_taxonomy(
 		'custom',
 		'post',

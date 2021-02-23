@@ -2,7 +2,12 @@
 
 
 /**
- * Add theme support
+ * Add theme support for:
+ *
+ * 1. Post thumbnails.
+ * 2. The correct implementation of the <title> tag.
+ * 3. HTML5 fields in the default search form.
+ * 4. Valid HTML <script> tags (no 'type' attribute).
  */
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'title-tag' );
@@ -14,7 +19,7 @@ add_theme_support( 'html5', [ 'script', 'style' ] );
 
 
 /**
- * Enqueue CSS
+ * Enqueue project CSS files.
  */
 function tac_css_enqueuer() {
 	wp_register_style( 'tac_main', get_stylesheet_directory_uri() . '/style.css' );
@@ -27,7 +32,7 @@ add_action( 'wp_enqueue_scripts', 'tac_css_enqueuer' );
 
 
 /**
- * Enqueue JS
+ * Enqueue project JS files.
  */
 function tac_script_enqueuer() {
 	if ( ! is_admin() ) {
@@ -44,7 +49,7 @@ add_action( 'wp_enqueue_scripts', 'tac_script_enqueuer' );
 
 
 /**
- * Include favicons and touch icons
+ * Include favicons and touch icons.
  */
 function tac_add_favicon() {
 	?>
@@ -60,7 +65,7 @@ add_action( 'wp_head' , 'tac_add_favicon' );
 
 
 /**
- * Register menus
+ * Register menus.
  */
 register_nav_menus( array(
 	'main' => 'Main Menu',
@@ -117,7 +122,7 @@ function tac_is_paginated() {
 
 
 /**
- * Custom excerpt length
+ * Custom excerpt length.
  */
 function tac_custom_excerpt_length( $length ) {
 	return 15;
@@ -130,7 +135,7 @@ add_filter( 'excerpt_length', 'tac_custom_excerpt_length', 999 );
 
 
 /**
- * Customise the excerpt text
+ * Customise the excerpt text.
  */
 function tac_new_excerpt_more( $more ) {
 	return '...';

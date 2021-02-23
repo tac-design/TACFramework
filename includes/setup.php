@@ -2,7 +2,7 @@
 
 
 /**
- * Remove dashboard widgets that aren't needed
+ * Remove dashboard widgets that aren't needed.
  */
 function tac_remove_dashboard_widgets() {
 	global $wp_meta_boxes;
@@ -22,7 +22,7 @@ add_action( 'wp_dashboard_setup', 'tac_remove_dashboard_widgets' );
 
 
 /**
- * Remove meta boxes on post editor screens that aren't needed
+ * Remove meta boxes on post editor screens that aren't needed.
  */
 function remove_extra_meta_boxes() {
 	remove_meta_box( 'postcustom' , 'post' , 'normal' ); // custom fields for posts.
@@ -42,7 +42,7 @@ add_action( 'admin_menu' , 'remove_extra_meta_boxes' );
 
 
 /**
- * Remove dashboard menu items that aren't needed
+ * Remove dashboard menu items that aren't needed.
  */
 function tac_remove_menus() {
 	global $menu;
