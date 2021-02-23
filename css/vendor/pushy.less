@@ -2,19 +2,25 @@
    Pushy
    ========================================================================== */
 
+
 /**
- * An off canvass menu.
- *
+ * Vairables.
  */
 
+@pushy-width: 48rem;
+@pushy-width-mobile: 32rem;
 
 
 
-/* Menu Appearance */
+
+
+/**
+ * Menu Appearance.
+ */
 
 .pushy {
 	position: fixed;
-	width: 48rem;
+	width: @pushy-width;
 	height: 100%;
 	top: 0;
 	z-index: 9999;
@@ -23,7 +29,7 @@
 	/* enables momentum scrolling in iOS overflow elements */
 
 	@media @small-down {
-		width: 32rem;
+		width: @pushy-width-mobile;
 		max-width: 100%;
 	}
 }
@@ -43,7 +49,10 @@
 
 
 
-/* Site Overlay */
+
+/**
+ * Site overlay.
+ */
 
 .site-overlay {
 	display: none;
@@ -65,37 +74,40 @@
 
 
 
-/* Menu Movement */
+
+/**
+ * Menu movement.
+ */
 
 .pushy-left {
-	transform: translate3d(-48rem, 0, 0);
+	transform: translate3d(-@pushy-width, 0, 0);
 
 	@media @small-down {
-		transform: translate3d(-32rem, 0, 0);
+		transform: translate3d(-@pushy-width-mobile, 0, 0);
 	}
 }
 
 .pushy-open-left .push {
-	transform: translate3d(48rem, 0, 0);
+	transform: translate3d(@pushy-width, 0, 0);
 
 	@media @small-down {
-		transform: translate3d(32rem, 0, 0);
+		transform: translate3d(@pushy-width-mobile, 0, 0);
 	}
 }
 
 .pushy-right {
-	transform: translate3d(48rem, 0, 0);
+	transform: translate3d(@pushy-width, 0, 0);
 
 	@media @small-down {
-		transform: translate3d(32rem, 0, 0);
+		transform: translate3d(@pushy-width-mobile, 0, 0);
 	}
 }
 
 .pushy-open-right .push {
-	transform: translate3d(-48rem, 0, 0);
+	transform: translate3d(-@pushy-width, 0, 0);
 
 	@media @small-down {
-		transform: translate3d(-32rem, 0, 0);
+		transform: translate3d(-@pushy-width-mobile, 0, 0);
 	}
 }
 
@@ -112,7 +124,10 @@
 
 
 
-/* Menu Transitions */
+
+/**
+ * Menu transitions.
+ */
 
 .pushy,
 .push {
@@ -126,7 +141,9 @@
 
 
 
-/* Animations. */
+/**
+ * Animations.
+ */
 
 @keyframes fade {
 	
