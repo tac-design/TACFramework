@@ -16,6 +16,7 @@ sitemap.xml.gz
 
 /*
 !.gitignore
+!.csscomb.json
 !wp-content/
 !robots.txt
 !humans.txt
