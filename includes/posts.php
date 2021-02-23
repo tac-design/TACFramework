@@ -35,6 +35,7 @@ add_action( 'init', 'tac_create_post_type' );
 
 
 
+
 /**
  * Create custom taxonomies.
  * 

@@ -142,3 +142,18 @@ function tac_new_excerpt_more( $more ) {
 }
 
 add_filter( 'excerpt_more', 'tac_new_excerpt_more' );
+
+
+
+
+
+
+/**
+ * Customise the Gravity Forms submit button.
+ */
+function tac_form_submit_button( $button, $form ) {
+	return "<button id='gform_submit_button_{$form['id']}'>Submit form</button>";
+}
+
+
+add_filter( 'gform_submit_button', 'tac_form_submit_button', 10, 2 );
