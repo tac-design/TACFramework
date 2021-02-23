@@ -19,7 +19,7 @@
                 "layouts": {
                     "layout_5cc02a3e9c9b2": {
                         "key": "layout_5cc02a3e9c9b2",
-                        "name": "text_area",
+                        "name": "text",
                         "label": "Text Area",
                         "display": "block",
                         "sub_fields": [
@@ -67,7 +67,7 @@
                     },
                     "layout_5cc03bf85787a": {
                         "key": "layout_5cc03bf85787a",
-                        "name": "text_image",
+                        "name": "textimage",
                         "label": "Text & Image",
                         "display": "block",
                         "sub_fields": [
@@ -322,7 +322,7 @@
                     },
                     "layout_5cc0686aa0819": {
                         "key": "layout_5cc0686aa0819",
-                        "name": "full_width_image",
+                        "name": "image",
                         "label": "Full Width Image",
                         "display": "block",
                         "sub_fields": [
