@@ -16,17 +16,21 @@
 /* 1. Media queries
    ========================================================================== */
 
-@xs-small-down: ~"only screen and (max-width: 401px)";
+/**
+ * Media queries for device targetting.
+ */
+
+@x-small-down: ~"only screen and (max-width: 401px)";
 @small-down: ~"only screen and (max-width: 767px)";
 @medium-down: ~"only screen and (max-width: 990px)";
 @large-down: ~"only screen and (max-width: 1200px)";
-@extra-large-down: ~"only screen and (max-width: 1520px)";
+@x-large-down: ~"only screen and (max-width: 1520px)";
 
-@xs-small-up: ~"only screen and (min-width: 401px)";
+@x-small-up: ~"only screen and (min-width: 401px)";
 @small-up: ~"only screen and (min-width: 768px)";
 @medium-up: ~"only screen and (min-width: 991px)";
 @large-up: ~"only screen and (min-width: 1201px)";
-@extra-large-up: ~"only screen and (min-width: 1521px)";
+@x-large-up: ~"only screen and (min-width: 1521px)";
 
 
 
@@ -35,16 +39,25 @@
 /* 2. Colours
    ========================================================================== */
 
-@primary: #DB504A;
-@secondary: #254441;
 
-@body: #666666;
-@dark: #000000;
-@light: #FFFFFF;
+/**
+ * Brand colour palette.
+ */
 
-@light-grey: #FAFAFA;
-@mid-grey: #BDBDBD;
-@dark-grey: #3A3A3A;
+@colour1: #DB504A;
+@colour2: #254441;
+
+
+/**
+ * Blacks, whites and greys.
+ */
+
+@black: #000000;
+@white: #FFFFFF;
+@grey: #666666;
+@lightgrey: #FAFAFA;
+@midgrey: #BDBDBD;
+@darkgrey: #3A3A3A;
 
 
 
@@ -53,11 +66,26 @@
 /* 3. Units
    ========================================================================== */
 
-@gutter: 1.5rem; /* The gutter for grid columns. */
-@site-padding: 3.5rem; /* Use this variable to define the side padding for the site. */
+/**
+ * Global gutter width - use with grids and flex layouts.
+ */
 
-@unit-xs: 2rem;
-@unit-s: 6.5rem;
-@unit-m: 10rem;
-@unit-l: 13rem;
-@unit-xl: 17rem;
+@gutter: 1.5rem;
+
+
+/**
+ * Site padding is used to add a consistent outer gutter to the site.
+ */
+
+@site-padding: 3.5rem;
+
+
+/**
+ * A set of global size variables that are used throughout the project.
+ */
+
+@unit-xs: 2.5rem;
+@unit-s: 5rem;
+@unit-m: 7.5rem;
+@unit-l: 10rem;
+@unit-xl: 15rem;
