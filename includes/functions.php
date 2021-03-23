@@ -47,7 +47,6 @@ add_action( 'wp_enqueue_scripts', 'tac_script_enqueuer' );
 
 
 
-
 /**
  * Include favicons and touch icons.
  */
