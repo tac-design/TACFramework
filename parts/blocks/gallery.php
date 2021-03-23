@@ -11,12 +11,8 @@ if( $images ) :
 		foreach( $images as $image ):
 			?>
 
-			<div class="col">
-
-				<?php
-				echo wp_get_attachment_image( $image['ID'], $size ); ?>
-
-			</div>
+			<?php
+			echo wp_get_attachment_image( $image['ID'], $size ); ?>
 
     	<?php
     	endforeach;
