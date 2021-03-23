@@ -15,17 +15,6 @@
 
 		<div class="site-overlay"></div>
 
-		<nav id="mobile-navigation" class="mobile-nav pushy pushy-right">
-			<button class="menu-btn">Close</button>
-
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'main',
-				'container' => false,
-			) );
-			?>
-			
-		</nav>
 		<header id="masthead" class="site-head">
 			<a class="site-logo" href="<?php echo esc_html( site_url() ); ?>">
 				<img src="<?php echo esc_html( get_stylesheet_directory_uri() ); ?>/img/logo.svg" alt="<?php bloginfo( 'name' );?>">
@@ -41,5 +30,17 @@
 			</nav>
 			<button class="menu-btn">Menu</button>
 		</header>
+
+		<nav id="mobile-navigation" class="mobile-nav pushy pushy-right">
+			<button class="menu-btn">Close</button>
+
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'main',
+				'container' => false,
+			) );
+			?>
+			
+		</nav>
 
 		<main id="main" class="site-main">
